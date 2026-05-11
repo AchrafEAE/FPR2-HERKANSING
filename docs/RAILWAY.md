@@ -57,14 +57,19 @@ Railway zal nu automatisch:
 Railway genereert automatisch sommige variabelen. Vul deze handmatig in:
 
 1. In Railway dashboard → **"Variables"** tab
-2. Voeg toe:
+2. Voeg deze toe (de `DATABASE_URL` wordt automatisch door Railway gegenereerd na MySQL service toevoegen):
 
 ```
 APP_NAME=Portfolio
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://your-app.railway.app   (wordt gegenereerd, pas later aan)
+APP_URL=https://your-app.railway.app
 DB_CONNECTION=mysql
+DATABASE_URL=${{ MYSQL_URL }}
+```
+
+**Of**, als je individual variables wilt:
+```
 DB_HOST=${{ MYSQL_HOST }}
 DB_PORT=${{ MYSQL_PORT }}
 DB_DATABASE=${{ MYSQL_DATABASE }}
@@ -76,7 +81,7 @@ Railway substitueert `${{ MYSQL_* }}` automatisch.
 
 3. **Generate APP_KEY**: 
    - Lokaal: `php artisan key:generate --show`
-   - Copy de output (zonder `base64:` prefix)
+   - Copy de output
    - Paste in Railway variable `APP_KEY`
 
 ## Stap 6: Deployment Commando's
