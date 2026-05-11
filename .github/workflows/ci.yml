@@ -1,0 +1,39 @@
+name: Portfolio CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  quality-and-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: xdebug
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Prepare app key
+        run: php artisan key:generate
+
+      - name: PHPStan level 8
+        run: vendor/bin/phpstan analyse --memory-limit=1G
+
+      - name: PHPCS PSR-12
+        run: vendor/bin/phpcs
+
+      - name: Deptrac
+        run: vendor/bin/deptrac analyse --no-progress
+
+      - name: Run tests with coverage
+        run: php artisan test --coverage --min=60
