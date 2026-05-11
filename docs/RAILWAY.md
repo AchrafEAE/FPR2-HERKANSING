@@ -84,45 +84,99 @@ Railway substitueert `${{ MYSQL_* }}` automatisch.
    - Copy de output
    - Paste in Railway variable `APP_KEY`
 
-## Stap 6: Deployment Commando's
+## Stap 6: Build en Start Commando's Instellen
 
-Railway voert migrations automatisch uit als je dit toevoegt:
+Railway moet migraties uitvoeren en het app starten. Controleer deze instellingen:
 
-1. Dashboard → **"Deployment"** tab
-2. Scroll naar **"Build Command"**, click edit
-3. Voeg toe:
+1. Dashboard → je app → **"Deployment"** tab (of **"Settings"** → **"Build & Deploy"**)
+
+2. **Build Command** (voer migraties uit):
    ```bash
    composer install && php artisan migrate --force
    ```
 
-4. **Start Command** mag al `php artisan serve` zijn, maar beter:
+3. **Start Command** (cache en start server):
    ```bash
-   php artisan config:cache && php artisan config:clear && php artisan view:cache && php artisan route:cache && php artisan serve --host=0.0.0.0 --port=$PORT
+   php artisan config:cache && php artisan route:cache && php artisan serve --host=0.0.0.0 --port=$PORT
    ```
 
-## Stap 7: HTTPS & Custom Domain (Optioneel)
+## Stap 7: Controleer DATABASE_URL / MYSQL_* Variabelen
 
-Railway geeft je automatisch een URL: `https://your-app-xxxxxx.railway.app`
+Railway genereert automatisch `MYSQL_*` variabelen na MySQL service toevoegen. Controleer:
 
-Als je een custom domain wilt:
-1. Buy domain (bijv. NameCheap, GoDaddy)
-2. Railway Dashboard → **"Settings"** → **"Domain"** → Add custom domain
-3. Volg CNAME instructies
+1. Dashboard → **"Variables"** tab
+2. Je moet zien:
+   - `MYSQL_HOST` (bijv. `containers-us-west-xyz.railway.app`)
+   - `MYSQL_PORT` (bijv. `3306`)
+   - `MYSQL_USER` (bijv. `root`)
+   - `MYSQL_PASSWORD` (gegenereerde wachtwoord)
+   - `MYSQL_DATABASE` (bijv. `railway`)
 
-## Stap 8: Live Deployment
+3. **Kies één aanpak** (niet allebei):
+   - **Optie A: DATABASE_URL** (eenvoudiger):
+     ```
+     DATABASE_URL=${{ MYSQL_URL }}
+     ```
+     (Als `MYSQL_URL` niet beschikbaar is, voeg handmatig toe: `mysql://user:pass@host:port/database`)
+   
+   - **Optie B: Individuele variabelen**:
+     ```
+     DB_CONNECTION=mysql
+     DB_HOST=${{ MYSQL_HOST }}
+     DB_PORT=${{ MYSQL_PORT }}
+     DB_DATABASE=${{ MYSQL_DATABASE }}
+     DB_USERNAME=${{ MYSQL_USER }}
+     DB_PASSWORD=${{ MYSQL_PASSWORD }}
+     ```
 
-Na setup:
-- **Local commit & push**:
-  ```bash
-  git add .
-  git commit -m "Your message"
-  git push origin main
-  ```
+4. Voeg ook toe:
+   ```
+   APP_NAME=Portfolio
+   APP_ENV=production
+   APP_DEBUG=false
+   APP_URL=https://your-app.railway.app (pas dit aan naar je echte domain)
+   APP_KEY=base64:YOUR_KEY_HERE (zie Stap 5)
+   ```
 
-- Railway **detecteert push automatisch** en start deployment
-- Check status in Railway dashboard: Logs tab
+## Stap 5: Generate APP_KEY
 
-## Troubleshooting
+Lokaal:
+```bash
+php artisan key:generate --show
+```
+
+Copy de hele output (inclusief `base64:` prefix) en plak in Railway variable `APP_KEY`.
+
+## Stap 8: Deployment & Testen
+
+1. **Manual redeploy** (na variabelen ingesteld):
+   - Dashboard → **"Deployments"** → **"Trigger Deploy"** knop
+
+2. **Check Logs** (voor migratie-fouten):
+   - Dashboard → **"Logs"** tab
+   - Zoek naar `Running migrations` of `SQLSTATE` errors
+
+3. **Test** (na succesvol deploy):
+   ```bash
+   curl https://your-app.railway.app/
+   curl https://your-app.railway.app/api/v1/portfolio
+   ```
+
+## Troubleshooting Railway
+
+### 500 Error / Blank Page
+- Check Logs tab voor PHP/Laravel errors
+- Verify `DATABASE_URL` of `MYSQL_*` variabelen zijn gezet
+- Verify `APP_KEY` is geldig (start met `base64:`)
+
+### "Migrations not found" / "SQLSTATE" Errors
+- Check of Build Command is ingesteld
+- Controleer DATABASE_URL / MYSQL_* syntax
+- Test lokaal: `php artisan migrate --force` met dezelfde DB credentials
+
+### MySQL Geen Tabellen
+- Redeploy met Build Command: `composer install && php artisan migrate --force`
+- Check Logs durante deployment voor migration errors
 
 ### Deployment fails
 1. Check logs: Railway Dashboard → Logs tab
