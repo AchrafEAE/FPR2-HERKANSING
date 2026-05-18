@@ -32,7 +32,7 @@ COPY . /build
 RUN composer install --no-dev --no-interaction --no-progress --optimize-autoloader
 
 # Install Node dependencies and compile Vite assets
-RUN npm ci && npm run build
+RUN npm install && npm run build
 
 # Production stage
 FROM php:8.2-fpm
