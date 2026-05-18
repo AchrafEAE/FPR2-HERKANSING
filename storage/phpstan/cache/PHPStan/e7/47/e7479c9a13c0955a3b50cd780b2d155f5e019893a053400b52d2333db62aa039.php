@@ -97,7 +97,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
     array (
-      0 => '6684ea83a6edd2bbb596b89c44bd2f2ebca1553265fd4de3748a683fa6be7c73',
+      0 => 'e655cc737234224b10221b077ad329e84cce489ad9c30c592e7b9d28d16f4d4b',
       1 => 
       array (
         0 => 'app\\models\\bio',
@@ -145,7 +145,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php' => 
     array (
-      0 => '0b6cbcc6ae22cf273c15f1deaaf3f36e5b2684b14db1cc6b2d305f9f2cab8c8b',
+      0 => '0ada65e45b14378295daab6240725d23f7e5e1934adf632d0e9756be4dc3d21b',
       1 => 
       array (
         0 => 'app\\http\\controllers\\auth\\authcontroller',
@@ -229,7 +229,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php' => 
     array (
-      0 => '923556f28bbe5576ebe8725842900f43a2443687c6a332f224b579209ffb3aef',
+      0 => 'a19b83bc5d2a5660b9ecfeb9a8afb59f60e1d1dfb9f9e99ee9773826d8a595da',
       1 => 
       array (
         0 => 'app\\services\\userservice',
@@ -241,6 +241,36 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         2 => 'app\\services\\updaterole',
         3 => 'app\\services\\promotetoeditor',
         4 => 'app\\services\\demotetovisitor',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\ApiAuthenticate.php' => 
+    array (
+      0 => 'f7b2c4cade882857f3a5781f1d6b8596d4c47f6d010cdd070a385b663a8996eb',
+      1 => 
+      array (
+        0 => 'app\\http\\middleware\\apiauthenticate',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\middleware\\handle',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\ForceJsonRequests.php' => 
+    array (
+      0 => '1cda43a37fb142b71c417d67f37c872cddf0eb44015976731627b85337c53793',
+      1 => 
+      array (
+        0 => 'app\\http\\middleware\\forcejsonrequests',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\middleware\\handle',
       ),
       3 => 
       array (

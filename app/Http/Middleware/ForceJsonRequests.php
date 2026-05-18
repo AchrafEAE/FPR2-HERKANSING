@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 final class ForceJsonRequests
 {
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): mixed
     {
         $request->headers->set('Accept', 'application/json');
 

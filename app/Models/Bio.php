@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
+ * @method static \Database\Factories\BioFactory factory(...$parameters)
+ * @extends \Illuminate\Database\Eloquent\Model<\App\Models\Bio>
  * @property int $id
  * @property int $user_id
  * @property string $headline
@@ -20,6 +22,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \App\Models\User|null $user
  */
+/** @phpstan-ignore-next-line */
 class Bio extends Model
 {
     use HasFactory;

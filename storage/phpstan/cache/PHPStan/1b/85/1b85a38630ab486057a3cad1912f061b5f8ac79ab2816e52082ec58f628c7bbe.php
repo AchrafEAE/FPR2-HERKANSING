@@ -2,7 +2,7 @@
 
 // odsl-C:\Visual-studio-project-folder\FPR2 HERKANSING\app\Services\UserService.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Services\UserService
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-923556f28bbe5576ebe8725842900f43a2443687c6a332f224b579209ffb3aef',
+   'variableKey' => 'v2-6.70.0.0-8.2.12-a19b83bc5d2a5660b9ecfeb9a8afb59f60e1d1dfb9f9e99ee9773826d8a595da',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 11,
-    'endLine' => 64,
+    'endLine' => 67,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => NULL,
@@ -158,7 +158,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * Register a new user
  */',
         'startLine' => 16,
-        'endLine' => 23,
+        'endLine' => 26,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -196,8 +196,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 28,
-            'endLine' => 28,
+            'startLine' => 31,
+            'endLine' => 31,
             'startColumn' => 34,
             'endColumn' => 46,
             'parameterIndex' => 0,
@@ -222,8 +222,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 28,
-            'endLine' => 28,
+            'startLine' => 31,
+            'endLine' => 31,
             'startColumn' => 49,
             'endColumn' => 64,
             'parameterIndex' => 1,
@@ -265,8 +265,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Authenticate a user
  */',
-        'startLine' => 28,
-        'endLine' => 37,
+        'startLine' => 31,
+        'endLine' => 40,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -304,8 +304,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 42,
-            'endLine' => 42,
+            'startLine' => 45,
+            'endLine' => 45,
             'startColumn' => 32,
             'endColumn' => 41,
             'parameterIndex' => 0,
@@ -330,8 +330,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 42,
-            'endLine' => 42,
+            'startLine' => 45,
+            'endLine' => 45,
             'startColumn' => 44,
             'endColumn' => 57,
             'parameterIndex' => 1,
@@ -354,8 +354,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Update user role
  */',
-        'startLine' => 42,
-        'endLine' => 47,
+        'startLine' => 45,
+        'endLine' => 50,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -393,8 +393,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 52,
-            'endLine' => 52,
+            'startLine' => 55,
+            'endLine' => 55,
             'startColumn' => 37,
             'endColumn' => 46,
             'parameterIndex' => 0,
@@ -417,8 +417,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Promote user to editor
  */',
-        'startLine' => 52,
-        'endLine' => 55,
+        'startLine' => 55,
+        'endLine' => 58,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -456,8 +456,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 60,
-            'endLine' => 60,
+            'startLine' => 63,
+            'endLine' => 63,
             'startColumn' => 37,
             'endColumn' => 46,
             'parameterIndex' => 0,
@@ -480,8 +480,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Demote user to visitor
  */',
-        'startLine' => 60,
-        'endLine' => 63,
+        'startLine' => 63,
+        'endLine' => 66,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

@@ -1,8 +1,8 @@
 <?php declare(strict_types = 1);
 
-// odsl-C:\Visual-studio-project-folder\FPR2 HERKANSING\app\Models\Bio.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\Bio
+// osfsl-C:/Visual-studio-project-folder/FPR2 HERKANSING/database/factories/BioFactory.php-PHPStan\BetterReflection\Reflection\ReflectionClass-Database\Factories\BioFactory
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-e655cc737234224b10221b077ad329e84cce489ad9c30c592e7b9d28d16f4d4b',
+   'variableKey' => 'v2-4a344fbec0ac2d36a2ff91006d952ffe0c8af0d0c66c784c3b5a81aca5a4a4c5-8.2.12-6.70.0.0',
    'data' => 
   array (
     'locatedSource' => 
@@ -10,69 +10,66 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       'class' => 'PHPStan\\BetterReflection\\SourceLocator\\Located\\LocatedSource',
       'data' => 
       array (
-        'name' => 'App\\Models\\Bio',
-        'filename' => 'C:/Visual-studio-project-folder/FPR2 HERKANSING/app/Models/Bio.php',
+        'name' => 'Database\\Factories\\BioFactory',
+        'filename' => 'C:/Visual-studio-project-folder/FPR2 HERKANSING/database/factories/BioFactory.php',
       ),
     ),
-    'namespace' => 'App\\Models',
-    'name' => 'App\\Models\\Bio',
-    'shortName' => 'Bio',
+    'namespace' => 'Database\\Factories',
+    'name' => 'Database\\Factories\\BioFactory',
+    'shortName' => 'BioFactory',
     'isInterface' => false,
     'isTrait' => false,
     'isEnum' => false,
     'isBackedEnum' => false,
-    'modifiers' => 0,
-    'docComment' => '/** @phpstan-ignore-next-line */',
+    'modifiers' => 32,
+    'docComment' => NULL,
     'attributes' => 
     array (
     ),
-    'startLine' => 26,
-    'endLine' => 52,
+    'startLine' => 8,
+    'endLine' => 26,
     'startColumn' => 1,
     'endColumn' => 1,
-    'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
+    'parentClassName' => 'Illuminate\\Database\\Eloquent\\Factories\\Factory',
     'implementsClassNames' => 
     array (
     ),
     'traitClassNames' => 
     array (
-      0 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
     ),
     'immediateConstants' => 
     array (
     ),
     'immediateProperties' => 
     array (
-      'fillable' => 
+      'model' => 
       array (
-        'declaringClassName' => 'App\\Models\\Bio',
-        'implementingClassName' => 'App\\Models\\Bio',
-        'name' => 'fillable',
+        'declaringClassName' => 'Database\\Factories\\BioFactory',
+        'implementingClassName' => 'Database\\Factories\\BioFactory',
+        'name' => 'model',
         'modifiers' => 2,
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'user_id\', \'headline\', \'summary\', \'location\', \'availability\', \'website_url\', \'linkedin_url\', \'github_url\', \'years_experience\']',
+          'code' => '\\App\\Models\\Bio::class',
           'attributes' => 
           array (
-            'startLine' => 33,
-            'endLine' => 43,
-            'startTokenPos' => 49,
-            'startFilePos' => 906,
-            'endTokenPos' => 78,
-            'endFilePos' => 1111,
+            'startLine' => 10,
+            'endLine' => 10,
+            'startTokenPos' => 35,
+            'startFilePos' => 184,
+            'endTokenPos' => 37,
+            'endFilePos' => 193,
           ),
         ),
-        'docComment' => '/**
- * @var list<string>
- */',
+        'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 33,
-        'endLine' => 43,
+        'startLine' => 10,
+        'endLine' => 10,
         'startColumn' => 5,
-        'endColumn' => 6,
+        'endColumn' => 34,
         'isPromoted' => false,
         'declaredAtCompileTime' => true,
         'immediateVirtual' => false,
@@ -83,9 +80,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateMethods' => 
     array (
-      'user' => 
+      'definition' => 
       array (
-        'name' => 'user',
+        'name' => 'definition',
         'parameters' => 
         array (
         ),
@@ -95,18 +92,16 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
           'data' => 
           array (
-            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
-            'isIdentifier' => false,
+            'name' => 'array',
+            'isIdentifier' => true,
           ),
         ),
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * @return BelongsTo<User, $this>
- */',
-        'startLine' => 48,
-        'endLine' => 51,
+        'docComment' => NULL,
+        'startLine' => 12,
+        'endLine' => 25,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -114,10 +109,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'isGenerator' => false,
         'isVariadic' => false,
         'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\Bio',
-        'implementingClassName' => 'App\\Models\\Bio',
-        'currentClassName' => 'App\\Models\\Bio',
+        'namespace' => 'Database\\Factories',
+        'declaringClassName' => 'Database\\Factories\\BioFactory',
+        'implementingClassName' => 'Database\\Factories\\BioFactory',
+        'currentClassName' => 'Database\\Factories\\BioFactory',
         'aliasName' => NULL,
       ),
     ),
