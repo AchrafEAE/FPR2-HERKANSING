@@ -61,6 +61,5 @@
         </div>
     </footer>
 
-    {{-- Vite assets are loaded in the header when available; fallback uses public/css/styles.css --}}
 </body>
 </html>
