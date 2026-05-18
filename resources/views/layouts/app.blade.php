@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title') - Portfolio</title>
 
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+    @if (app()->environment('production') || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
