@@ -6,11 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title') - Portfolio</title>
 
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    @endif
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-100">
     <nav class="bg-white shadow-lg">
@@ -59,6 +55,5 @@
         </div>
     </footer>
 
-    {{-- Vite assets are loaded in the header when available; fallback uses public/css/styles.css --}}
 </body>
 </html>
