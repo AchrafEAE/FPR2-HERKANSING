@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title') - Portfolio</title>
 
+    {{-- Always load fallback CSS as safety net --}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    
+    {{-- Load Vite compiled assets in production/dev with HMR --}}
     @if (app()->environment('production') || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     @endif
 </head>
 <body class="bg-gray-100">
