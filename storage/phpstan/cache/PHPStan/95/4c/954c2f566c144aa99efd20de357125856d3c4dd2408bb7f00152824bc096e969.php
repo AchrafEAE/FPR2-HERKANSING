@@ -2,7 +2,7 @@
 
 // odsl-C:\Visual-studio-project-folder\FPR2 HERKANSING\app\Http\Middleware\ApiAuthenticate.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Middleware\ApiAuthenticate
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-f7b2c4cade882857f3a5781f1d6b8596d4c47f6d010cdd070a385b663a8996eb',
+   'variableKey' => 'v2-6.70.0.0-8.2.12-8f658d5e8b9304eb732a8f1aecb80b93a00eb882c6cd68eeb7f1c82dd1d781ac',
    'data' => 
   array (
     'locatedSource' => 

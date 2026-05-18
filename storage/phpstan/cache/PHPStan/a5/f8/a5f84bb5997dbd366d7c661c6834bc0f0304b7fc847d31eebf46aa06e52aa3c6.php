@@ -2,7 +2,7 @@
 
 // odsl-C:\Visual-studio-project-folder\FPR2 HERKANSING\app\Http\Middleware\ForceJsonRequests.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Middleware\ForceJsonRequests
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-1cda43a37fb142b71c417d67f37c872cddf0eb44015976731627b85337c53793',
+   'variableKey' => 'v2-6.70.0.0-8.2.12-cba3782e65ad88add7de1688ea1e4bb0aaa29f3cd349bc540179667296bbbf87',
    'data' => 
   array (
     'locatedSource' => 

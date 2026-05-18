@@ -10,6 +10,7 @@ class PortfolioController extends Controller
 {
     public function show(): JsonResponse
     {
+        /** @var Bio|null $bio */
         $bio = Bio::query()->with('user')->latest('updated_at')->first();
 
         if ($bio === null) {

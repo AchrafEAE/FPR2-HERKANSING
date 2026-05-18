@@ -37,7 +37,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php' => 
     array (
-      0 => '6fff5a40db09e86185bcfb2ca17e00da691dc842e448a3c8cb66a0cc11a6f245',
+      0 => '4adc3932d7ed0f0eed5266895e043bc89a814c059dd133828ef4978d4d177d9b',
       1 => 
       array (
         0 => 'app\\http\\controllers\\api\\v1\\portfoliocontroller',
@@ -97,7 +97,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
     array (
-      0 => 'e655cc737234224b10221b077ad329e84cce489ad9c30c592e7b9d28d16f4d4b',
+      0 => '9c13a4a2d3066766b153cc33b751338ad3d00b02f43932a702d3a3cd7253b157',
       1 => 
       array (
         0 => 'app\\models\\bio',
@@ -248,7 +248,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\ApiAuthenticate.php' => 
     array (
-      0 => 'f7b2c4cade882857f3a5781f1d6b8596d4c47f6d010cdd070a385b663a8996eb',
+      0 => '8f658d5e8b9304eb732a8f1aecb80b93a00eb882c6cd68eeb7f1c82dd1d781ac',
       1 => 
       array (
         0 => 'app\\http\\middleware\\apiauthenticate',
@@ -263,7 +263,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\ForceJsonRequests.php' => 
     array (
-      0 => '1cda43a37fb142b71c417d67f37c872cddf0eb44015976731627b85337c53793',
+      0 => 'cba3782e65ad88add7de1688ea1e4bb0aaa29f3cd349bc540179667296bbbf87',
       1 => 
       array (
         0 => 'app\\http\\middleware\\forcejsonrequests',

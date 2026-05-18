@@ -84,7 +84,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           1 => 'App\\Models\\Bio',
           2 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
           3 => NULL,
-          4 => NULL,
+          4 => '/** @phpstan-ignore-next-line */',
         ),
       )),
       'ef2dd4ec46f04473454b64369f00c6fe' => 
@@ -161,7 +161,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           1 => 'App\\Models\\Bio',
           2 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
           3 => NULL,
-          4 => NULL,
+          4 => '/** @phpstan-ignore-next-line */',
         ),
       )),
       '077debd0f998e120842730b74758f3b2' => 
@@ -238,7 +238,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           1 => 'App\\Models\\Bio',
           2 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
           3 => NULL,
-          4 => NULL,
+          4 => '/** @phpstan-ignore-next-line */',
         ),
       )),
       'eb1c1a6e0723c6255c0a99e1c2ca93ce' => 
@@ -315,7 +315,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           1 => 'App\\Models\\Bio',
           2 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
           3 => NULL,
-          4 => NULL,
+          4 => '/** @phpstan-ignore-next-line */',
         ),
       )),
       '9fb743284ab78effc87b86da610cb604' => 
@@ -370,7 +370,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 'e655cc737234224b10221b077ad329e84cce489ad9c30c592e7b9d28d16f4d4b',
+      'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => '9c13a4a2d3066766b153cc33b751338ad3d00b02f43932a702d3a3cd7253b157',
       'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
     ),
   ),

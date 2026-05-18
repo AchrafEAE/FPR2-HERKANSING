@@ -2024,191 +2024,20 @@ return [
 	'projectExtensionFiles' => array (
 ),
 	'errorsCallback' => static function (): array { return array (
-  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$user.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 27,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 27,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$headline.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 28,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 28,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    2 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$summary.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 29,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 29,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    3 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$location.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 30,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 30,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    4 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$availability.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 31,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 31,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    5 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$website_url.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 32,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 32,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    6 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$linkedin_url.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 33,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 33,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    7 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$github_url.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 34,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 34,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    8 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$years_experience.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 35,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 35,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    9 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Bio::$updated_at.',
-       'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'line' => 36,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 36,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
+); },
+	'locallyIgnoredErrorsCallback' => static function (): array { return array (
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
   array (
     0 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Class App\\Models\\Bio uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types: TFactory',
        'file' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
-       'line' => 28,
+       'line' => 27,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 28,
+       'nodeLine' => 27,
        'nodeType' => 'PhpParser\\Node\\Stmt\\TraitUse',
        'identifier' => 'missingType.generics',
        'metadata' => 
@@ -2218,25 +2047,16 @@ return [
     )),
   ),
 ); },
-	'locallyIgnoredErrorsCallback' => static function (): array { return array (
-); },
 	'linesToIgnore' => array (
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
   array (
     'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
     array (
-      26 => NULL,
+      27 => NULL,
     ),
   ),
 ),
 	'unmatchedLineIgnores' => array (
-  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
-  array (
-    'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
-    array (
-      26 => NULL,
-    ),
-  ),
 ),
 	'collectedDataCallback' => static function (): array { return array (
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php' => 
@@ -2390,13 +2210,14 @@ return [
     'fileHash' => '8b21b2a7373aabc5369ad8c0ff131787e5e416c6ce69dcab658cf3dade25b047',
     'dependentFiles' => 
     array (
-      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
-      1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\EnsureUserHasRole.php',
-      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
-      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\User.php',
-      4 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php',
-      5 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php',
-      6 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php',
+      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
+      1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
+      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\EnsureUserHasRole.php',
+      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
+      4 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\User.php',
+      5 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php',
+      6 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php',
+      7 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php',
     ),
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php' => 
@@ -2408,7 +2229,7 @@ return [
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php' => 
   array (
-    'fileHash' => '6fff5a40db09e86185bcfb2ca17e00da691dc842e448a3c8cb66a0cc11a6f245',
+    'fileHash' => '4adc3932d7ed0f0eed5266895e043bc89a814c059dd133828ef4978d4d177d9b',
     'dependentFiles' => 
     array (
     ),
@@ -2432,7 +2253,7 @@ return [
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\ApiAuthenticate.php' => 
   array (
-    'fileHash' => 'f7b2c4cade882857f3a5781f1d6b8596d4c47f6d010cdd070a385b663a8996eb',
+    'fileHash' => '8f658d5e8b9304eb732a8f1aecb80b93a00eb882c6cd68eeb7f1c82dd1d781ac',
     'dependentFiles' => 
     array (
     ),
@@ -2446,7 +2267,7 @@ return [
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\ForceJsonRequests.php' => 
   array (
-    'fileHash' => '1cda43a37fb142b71c417d67f37c872cddf0eb44015976731627b85337c53793',
+    'fileHash' => 'cba3782e65ad88add7de1688ea1e4bb0aaa29f3cd349bc540179667296bbbf87',
     'dependentFiles' => 
     array (
     ),
@@ -2477,7 +2298,7 @@ return [
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php' => 
   array (
-    'fileHash' => 'e655cc737234224b10221b077ad329e84cce489ad9c30c592e7b9d28d16f4d4b',
+    'fileHash' => '9c13a4a2d3066766b153cc33b751338ad3d00b02f43932a702d3a3cd7253b157',
     'dependentFiles' => 
     array (
       0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php',
@@ -2491,10 +2312,14 @@ return [
     'fileHash' => '295ce7f82f89ac1ed6121308259d43ea1824dc22f04a53fd498c8fb0225f0b5b',
     'dependentFiles' => 
     array (
-      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
-      1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
-      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php',
-      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php',
+      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php',
+      1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
+      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
+      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\UpdateBioRequest.php',
+      4 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
+      5 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php',
+      6 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php',
+      7 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php',
     ),
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php' => 
@@ -3481,7 +3306,21 @@ return [
        'name' => 'App\\Models\\Bio',
        'phpDoc' => 
       \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-         'phpDocString' => '/** @phpstan-ignore-next-line */',
+         'phpDocString' => '/**
+ * @method static \\Database\\Factories\\BioFactory factory(...$parameters)
+ * @property int $id
+ * @property int $user_id
+ * @property string $headline
+ * @property string $summary
+ * @property string|null $location
+ * @property string|null $availability
+ * @property string|null $website_url
+ * @property string|null $linkedin_url
+ * @property string|null $github_url
+ * @property int|null $years_experience
+ * @property \\Illuminate\\Support\\Carbon|null $updated_at
+ * @property \\App\\Models\\User|null $user
+ */',
          'namespace' => 'App\\Models',
          'uses' => 
         array (
