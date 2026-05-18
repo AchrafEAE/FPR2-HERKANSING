@@ -9,6 +9,7 @@
     @if (file_exists(public_path('build/manifest.json')))
         @vite(['resources/css/app.css'])
     @endif
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body class="bg-gray-100">
     <nav class="bg-white shadow-lg">
@@ -27,7 +28,7 @@
                             <a href="{{ route('dashboard') }}" class="text-gray-600 hover:text-gray-900">
                                 Dashboard
                             </a>
-                            <form method="POST" action="{{ route('auth.logout') }}" class="inline">
+                            <form method="POST" action="{{ route('logout') }}" class="inline">
                                 @csrf
                                 <button type="submit" class="text-gray-600 hover:text-gray-900">
                                     Logout
