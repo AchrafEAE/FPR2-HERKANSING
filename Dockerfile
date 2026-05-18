@@ -14,6 +14,11 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Node.js LTS
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install PHP extensions
 RUN docker-php-ext-install pdo pdo_mysql
 
@@ -23,8 +28,11 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy app files
 COPY . /build
 
-# Install dependencies
+# Install PHP dependencies
 RUN composer install --no-dev --no-interaction --no-progress --optimize-autoloader
+
+# Install Node dependencies and compile Vite assets
+RUN npm ci && npm run build
 
 # Production stage
 FROM php:8.2-fpm
@@ -50,6 +58,9 @@ COPY docker/nginx.conf /etc/nginx/sites-available/default
 
 # Copy built app from builder
 COPY --from=builder /build /app
+
+# Copy compiled Vite assets into production image
+COPY --from=builder /build/public/build /app/public/build
 
 # Create necessary directories with permissions
 RUN mkdir -p /app/storage/logs /app/storage/framework/cache /app/storage/framework/views \
