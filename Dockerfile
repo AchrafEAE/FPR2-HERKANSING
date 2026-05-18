@@ -65,7 +65,8 @@ COPY --from=builder /build/public/build /app/public/build
 # Create necessary directories with permissions
 RUN mkdir -p /app/storage/logs /app/storage/framework/cache /app/storage/framework/views \
     && chown -R www-data:www-data /app \
-    && chmod -R 775 /app/storage /app/bootstrap/cache
+    && chmod -R 775 /app/storage /app/bootstrap/cache \
+    && chmod -R 755 /app/public/build
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
