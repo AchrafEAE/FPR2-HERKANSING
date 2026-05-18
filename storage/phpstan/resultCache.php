@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1778499354,
+	'lastFullAnalysisTime' => 1779105957,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.1.54',
@@ -2032,6 +2032,23 @@ return [
 	'unmatchedLineIgnores' => array (
 ),
 	'collectedDataCallback' => static function (): array { return array (
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Http\\Controllers\\Auth\\AuthController',
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Controller.php' => 
+  array (
+    'PHPStan\\Rules\\Traits\\TraitUseCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests',
+      ),
+    ),
+  ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\EnsureUserHasRole.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
@@ -2045,6 +2062,42 @@ return [
       array (
         0 => 'abort',
         1 => 32,
+      ),
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\LoginRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\LoginRequest',
+        1 => 'authorize',
+        2 => 'App\\Http\\Requests\\LoginRequest',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Requests\\LoginRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\LoginRequest',
+      ),
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\RegisterRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\RegisterRequest',
+        1 => 'authorize',
+        2 => 'App\\Http\\Requests\\RegisterRequest',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Requests\\RegisterRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\RegisterRequest',
       ),
     ),
   ),
@@ -2089,6 +2142,30 @@ return [
       ),
     ),
   ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Policies\\BioPolicy',
+        1 => 'view',
+        2 => 'App\\Policies\\BioPolicy',
+      ),
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'Illuminate\\Support\\Facades\\Gate',
+        1 => 'define',
+        2 => 31,
+      ),
+    ),
+  ),
 ); },
 	'dependencies' => array (
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Enums\\UserRole.php' => 
@@ -2097,14 +2174,18 @@ return [
     'dependentFiles' => 
     array (
       0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-      1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\EnsureUserHasRole.php',
-      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
-      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\User.php',
+      1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
+      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\EnsureUserHasRole.php',
+      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
+      4 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\User.php',
+      5 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php',
+      6 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php',
+      7 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php',
     ),
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php' => 
   array (
-    'fileHash' => '821e225cb39467856c35d29ba1b99324aaeac1564dc0a7c90e6dac4514eb27aa',
+    'fileHash' => '8140deb09a5464b8a8d80497e0ed7020df7708659d33b34e103cc03227e745b6',
     'dependentFiles' => 
     array (
     ),
@@ -2116,13 +2197,21 @@ return [
     array (
     ),
   ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php' => 
+  array (
+    'fileHash' => '0b6cbcc6ae22cf273c15f1deaaf3f36e5b2684b14db1cc6b2d305f9f2cab8c8b',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Controller.php' => 
   array (
-    'fileHash' => '25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1',
+    'fileHash' => 'e5ddafa07059bfc9f8310767b0fc04dd3b8a1f50bcec1fd693b19f5555697825',
     'dependentFiles' => 
     array (
       0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php',
       1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
+      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
     ),
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Middleware\\EnsureUserHasRole.php' => 
@@ -2132,9 +2221,25 @@ return [
     array (
     ),
   ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\LoginRequest.php' => 
+  array (
+    'fileHash' => 'b53e28df427eae6382ff55b706d92711201b8e720aa5c8c511fc4465cbac4d68',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\RegisterRequest.php' => 
+  array (
+    'fileHash' => 'fe7ccf1ad2abeb138504a7eebc0c41b26de9d020e773abfb4898cfdc30e50228',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
+    ),
+  ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\UpdateBioRequest.php' => 
   array (
-    'fileHash' => '0261e973f3375f8dbeb5216f7e3d61c8e22354ac88f973d6574de03078799082',
+    'fileHash' => 'd146fa50b9b6174ad08a14a7215d6c6feefb2e98d0d7cdb5f85c460d28ffaeb1',
     'dependentFiles' => 
     array (
       0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php',
@@ -2147,16 +2252,31 @@ return [
     array (
       0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php',
       1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
+      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\UpdateBioRequest.php',
+      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php',
     ),
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\User.php' => 
   array (
-    'fileHash' => 'd9e7eb32f44650aa927f35470fddc7db09c9fd2d4143e41ca3675133bca3cbca',
+    'fileHash' => '295ce7f82f89ac1ed6121308259d43ea1824dc22f04a53fd498c8fb0225f0b5b',
     'dependentFiles' => 
     array (
       0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php',
       1 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Api\\V1\\PortfolioController.php',
-      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
+      2 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
+      3 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\UpdateBioRequest.php',
+      4 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\Bio.php',
+      5 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php',
+      6 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php',
+      7 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php',
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php' => 
+  array (
+    'fileHash' => 'a08f8a9d826bf2cfac25d3fe264f84327fb3183bb1055288c8ed1fa63c04ca9b',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php',
     ),
   ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AppServiceProvider.php' => 
@@ -2164,6 +2284,21 @@ return [
     'fileHash' => 'caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7',
     'dependentFiles' => 
     array (
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php' => 
+  array (
+    'fileHash' => 'abb3be3a0645a5b9cb63128eb0ce916238c46083b3ab476584a81fc5c1f31cf0',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php' => 
+  array (
+    'fileHash' => '923556f28bbe5576ebe8725842900f43a2443687c6a332f224b579209ffb3aef',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php',
     ),
   ),
 ),
@@ -2336,6 +2471,292 @@ return [
       ),
     )),
   ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Auth\\AuthController.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Controllers\\Auth\\AuthController',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'App\\Http\\Controllers\\Controller',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'userService',
+               'type' => 'App\\Services\\UserService',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 68,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'showLoginForm',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Show login form
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'loginrequest' => 'App\\Http\\Requests\\LoginRequest',
+              'registerrequest' => 'App\\Http\\Requests\\RegisterRequest',
+              'userservice' => 'App\\Services\\UserService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'view' => 'Illuminate\\Contracts\\View\\View',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Contracts\\View\\View',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'login',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle login
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'loginrequest' => 'App\\Http\\Requests\\LoginRequest',
+              'registerrequest' => 'App\\Http\\Requests\\RegisterRequest',
+              'userservice' => 'App\\Services\\UserService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'view' => 'Illuminate\\Contracts\\View\\View',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'App\\Http\\Requests\\LoginRequest',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'showRegisterForm',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Show registration form
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'loginrequest' => 'App\\Http\\Requests\\LoginRequest',
+              'registerrequest' => 'App\\Http\\Requests\\RegisterRequest',
+              'userservice' => 'App\\Services\\UserService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'view' => 'Illuminate\\Contracts\\View\\View',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Contracts\\View\\View',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle registration
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'loginrequest' => 'App\\Http\\Requests\\LoginRequest',
+              'registerrequest' => 'App\\Http\\Requests\\RegisterRequest',
+              'userservice' => 'App\\Services\\UserService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'view' => 'Illuminate\\Contracts\\View\\View',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'App\\Http\\Requests\\RegisterRequest',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logout',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle logout
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'loginrequest' => 'App\\Http\\Requests\\LoginRequest',
+              'registerrequest' => 'App\\Http\\Requests\\RegisterRequest',
+              'userservice' => 'App\\Services\\UserService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'view' => 'Illuminate\\Contracts\\View\\View',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Controllers\\Controller.php' => 
   array (
     0 => 
@@ -2350,6 +2771,7 @@ return [
       ),
        'usedTraits' => 
       array (
+        0 => 'Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests',
       ),
        'traitUseAdaptations' => 
       array (
@@ -2450,6 +2872,156 @@ return [
                'phpDoc' => NULL,
                'flags' => 0,
             )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\LoginRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\LoginRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, array<int, string>>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Http\\Requests\\RegisterRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\RegisterRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, array<int, string>>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
           ),
            'attributes' => 
           array (
@@ -2668,6 +3240,7 @@ return [
          'phpDocString' => '/**
  * @property string $name
  * @property string $email
+ * @property string $password
  * @property \\App\\Enums\\UserRole $role
  */',
          'namespace' => 'App\\Models',
@@ -2909,6 +3482,167 @@ return [
       ),
     )),
   ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Policies\\BioPolicy.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Policies\\BioPolicy',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => true,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'view',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Determine if user can view the bio
+     */',
+             'namespace' => 'App\\Policies',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => '?App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'update',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Determine if user can update the bio (owner or editor only)
+     */',
+             'namespace' => 'App\\Policies',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'delete',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Determine if user can delete the bio (owner only)
+     */',
+             'namespace' => 'App\\Policies',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AppServiceProvider.php' => 
   array (
     0 => 
@@ -2986,6 +3720,417 @@ return [
            'returnType' => 'void',
            'parameters' => 
           array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Providers\\AuthServiceProvider.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Providers\\AuthServiceProvider',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => true,
+       'extends' => 'Illuminate\\Foundation\\Support\\Providers\\AuthServiceProvider',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'policies',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The policy mappings for the application.
+     *
+     * @var array<class-string, class-string>
+     */',
+             'namespace' => 'App\\Providers',
+             'uses' => 
+            array (
+              'bio' => 'App\\Models\\Bio',
+              'biopolicy' => 'App\\Policies\\BioPolicy',
+              'serviceprovider' => 'Illuminate\\Foundation\\Support\\Providers\\AuthServiceProvider',
+              'gate' => 'Illuminate\\Support\\Facades\\Gate',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'boot',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Register any authentication / authorization services.
+     */',
+             'namespace' => 'App\\Providers',
+             'uses' => 
+            array (
+              'bio' => 'App\\Models\\Bio',
+              'biopolicy' => 'App\\Policies\\BioPolicy',
+              'serviceprovider' => 'Illuminate\\Foundation\\Support\\Providers\\AuthServiceProvider',
+              'gate' => 'Illuminate\\Support\\Facades\\Gate',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Services\\UserService.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Services\\UserService',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => true,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Register a new user
+     */',
+             'namespace' => 'App\\Services',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Models\\User',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'email',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'password',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'role',
+               'type' => 'App\\Enums\\UserRole',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authenticate',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Authenticate a user
+     */',
+             'namespace' => 'App\\Services',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => '?App\\Models\\User',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'email',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'password',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'updateRole',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Update user role
+     */',
+             'namespace' => 'App\\Services',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Models\\User',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'role',
+               'type' => 'App\\Enums\\UserRole',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'promoteToEditor',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Promote user to editor
+     */',
+             'namespace' => 'App\\Services',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Models\\User',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'demoteToVisitor',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Demote user to visitor
+     */',
+             'namespace' => 'App\\Services',
+             'uses' => 
+            array (
+              'user' => 'App\\Models\\User',
+              'userrole' => 'App\\Enums\\UserRole',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Models\\User',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
           ),
            'attributes' => 
           array (

@@ -751,7 +751,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\User.php' => 'd9e7eb32f44650aa927f35470fddc7db09c9fd2d4143e41ca3675133bca3cbca',
+      'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\app\\Models\\User.php' => '295ce7f82f89ac1ed6121308259d43ea1824dc22f04a53fd498c8fb0225f0b5b',
       'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
       'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Notifications\\Notifiable.php' => '573fa9bb96fa392434450c9cd9deb8d4e40a5bb93c140a648267b48dfa0433ac',
       'C:\\Visual-studio-project-folder\\FPR2 HERKANSING\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Notifications\\HasDatabaseNotifications.php' => 'a7a163aa1f98a0ae4cd2135905b6852e29a850beb4296aa72c44c37d22832135',

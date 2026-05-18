@@ -12,6 +12,7 @@ use Illuminate\Notifications\Notifiable;
 /**
  * @property string $name
  * @property string $email
+ * @property string $password
  * @property \App\Enums\UserRole $role
  */
 class User extends Authenticatable

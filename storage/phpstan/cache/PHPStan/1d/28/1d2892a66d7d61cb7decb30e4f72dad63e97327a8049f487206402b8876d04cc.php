@@ -2,7 +2,7 @@
 
 // odsl-C:\Visual-studio-project-folder\FPR2 HERKANSING\app\Http\Controllers\Api\V1\BioController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Controllers\Api\V1\BioController
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-821e225cb39467856c35d29ba1b99324aaeac1564dc0a7c90e6dac4514eb27aa',
+   'variableKey' => 'v2-6.70.0.0-8.2.12-8140deb09a5464b8a8d80497e0ed7020df7708659d33b34e103cc03227e745b6',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 11,
-    'endLine' => 35,
+    'endLine' => 39,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'App\\Http\\Controllers\\Controller',
@@ -92,7 +92,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         ),
         'docComment' => NULL,
         'startLine' => 13,
-        'endLine' => 21,
+        'endLine' => 23,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -130,8 +130,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 23,
-            'endLine' => 23,
+            'startLine' => 25,
+            'endLine' => 25,
             'startColumn' => 28,
             'endColumn' => 52,
             'parameterIndex' => 0,
@@ -152,8 +152,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 23,
-        'endLine' => 34,
+        'startLine' => 25,
+        'endLine' => 38,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

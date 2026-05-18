@@ -2,7 +2,7 @@
 
 // odsl-C:\Visual-studio-project-folder\FPR2 HERKANSING\app\Models\User.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\User
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-d9e7eb32f44650aa927f35470fddc7db09c9fd2d4143e41ca3675133bca3cbca',
+   'variableKey' => 'v2-6.70.0.0-8.2.12-295ce7f82f89ac1ed6121308259d43ea1824dc22f04a53fd498c8fb0225f0b5b',
    'data' => 
   array (
     'locatedSource' => 
@@ -25,13 +25,14 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'docComment' => '/**
  * @property string $name
  * @property string $email
+ * @property string $password
  * @property \\App\\Enums\\UserRole $role
  */',
     'attributes' => 
     array (
     ),
-    'startLine' => 17,
-    'endLine' => 77,
+    'startLine' => 18,
+    'endLine' => 78,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Foundation\\Auth\\User',
@@ -60,12 +61,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'name\', \'email\', \'password\', \'role\']',
           'attributes' => 
           array (
-            'startLine' => 28,
-            'endLine' => 33,
+            'startLine' => 29,
+            'endLine' => 34,
             'startTokenPos' => 70,
-            'startFilePos' => 633,
+            'startFilePos' => 663,
             'endTokenPos' => 84,
-            'endFilePos' => 708,
+            'endFilePos' => 738,
           ),
         ),
         'docComment' => '/**
@@ -76,8 +77,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'startLine' => 28,
-        'endLine' => 33,
+        'startLine' => 29,
+        'endLine' => 34,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -99,12 +100,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'password\', \'remember_token\']',
           'attributes' => 
           array (
-            'startLine' => 40,
-            'endLine' => 43,
+            'startLine' => 41,
+            'endLine' => 44,
             'startTokenPos' => 95,
-            'startFilePos' => 847,
+            'startFilePos' => 877,
             'endTokenPos' => 103,
-            'endFilePos' => 899,
+            'endFilePos' => 929,
           ),
         ),
         'docComment' => '/**
@@ -115,8 +116,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'startLine' => 40,
-        'endLine' => 43,
+        'startLine' => 41,
+        'endLine' => 44,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -153,8 +154,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return array<string, string>
  */',
-        'startLine' => 50,
-        'endLine' => 57,
+        'startLine' => 51,
+        'endLine' => 58,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -192,8 +193,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 59,
-            'endLine' => 59,
+            'startLine' => 60,
+            'endLine' => 60,
             'startColumn' => 29,
             'endColumn' => 42,
             'parameterIndex' => 0,
@@ -214,8 +215,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 59,
-        'endLine' => 62,
+        'startLine' => 60,
+        'endLine' => 63,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -253,8 +254,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 67,
-            'endLine' => 67,
+            'startLine' => 68,
+            'endLine' => 68,
             'startColumn' => 32,
             'endColumn' => 43,
             'parameterIndex' => 0,
@@ -277,8 +278,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @param  array<int, UserRole>  $roles
  */',
-        'startLine' => 67,
-        'endLine' => 76,
+        'startLine' => 68,
+        'endLine' => 77,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

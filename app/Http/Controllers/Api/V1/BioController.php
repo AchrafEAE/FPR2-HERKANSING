@@ -12,6 +12,8 @@ class BioController extends Controller
 {
     public function show(Request $request): JsonResponse
     {
+        $this->authorize('view', Bio::class);
+
         $bio = Bio::query()->firstOrCreate(
             ['user_id' => $request->user()->id],
             ['headline' => 'Voeg je headline toe', 'summary' => 'Voeg je professionele samenvatting toe.'],
@@ -22,6 +24,8 @@ class BioController extends Controller
 
     public function update(UpdateBioRequest $request): JsonResponse
     {
+        $this->authorize('update', Bio::class);
+
         $bio = Bio::query()->updateOrCreate(
             ['user_id' => $request->user()->id],
             $request->validated(),

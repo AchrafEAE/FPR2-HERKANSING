@@ -2,7 +2,7 @@
 
 // odsl-C:\Visual-studio-project-folder\FPR2 HERKANSING\app\Http\Requests\UpdateBioRequest.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Requests\UpdateBioRequest
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-0261e973f3375f8dbeb5216f7e3d61c8e22354ac88f973d6574de03078799082',
+   'variableKey' => 'v2-6.70.0.0-8.2.12-d146fa50b9b6174ad08a14a7215d6c6feefb2e98d0d7cdb5f85c460d28ffaeb1',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 7,
-    'endLine' => 30,
+    'endLine' => 31,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Foundation\\Http\\FormRequest',
@@ -66,7 +66,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         ),
         'docComment' => NULL,
         'startLine' => 9,
-        'endLine' => 12,
+        'endLine' => 13,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -102,8 +102,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return array<string, list<string>>
  */',
-        'startLine' => 17,
-        'endLine' => 29,
+        'startLine' => 18,
+        'endLine' => 30,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
