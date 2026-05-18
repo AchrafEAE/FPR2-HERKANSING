@@ -26,7 +26,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Bio extends Model
 {
     use HasFactory;
- 
+
     /**
      * @var list<string>
      */
