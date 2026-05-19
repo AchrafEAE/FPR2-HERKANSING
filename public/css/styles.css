@@ -313,7 +313,10 @@ textarea {
     background: #ffffff;
     color: #0f172a;
     box-sizing: border-box;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
 }
 .form-input:focus,
 .form-select:focus,
