@@ -18,5 +18,5 @@ Route::post('/logout', [\App\Http\Controllers\Auth\AuthController::class, 'logou
     ->name('logout');
 
 Route::middleware('auth')->group(function (): void {
-    Route::view('/dashboard', 'portfolio.dashboard')->name('dashboard');
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
 });
