@@ -8,7 +8,7 @@
 
     {{-- Always load fallback CSS as safety net --}}
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    
+
     {{-- Load Vite compiled assets in production/dev with HMR --}}
     @if (app()->environment('production') || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])

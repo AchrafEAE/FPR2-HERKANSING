@@ -312,7 +312,10 @@ textarea {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-0.25rem);
-    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease,
+        visibility 0.15s ease;
     pointer-events: none;
 }
 .form-tip:hover .form-tip-text,
@@ -322,7 +325,7 @@ textarea {
     transform: translateY(0);
 }
 .form-tip-text::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -0.35rem;
     left: 0.9rem;
