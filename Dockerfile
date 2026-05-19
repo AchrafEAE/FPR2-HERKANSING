@@ -43,6 +43,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     nginx \
     curl \
+    gettext-base \
     libpq5 \
     && rm -rf /var/lib/apt/lists/*
 
@@ -54,7 +55,8 @@ COPY docker/php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
 COPY docker/php.ini /usr/local/etc/php/conf.d/app.ini
 
 # Copy Nginx config
-COPY docker/nginx.conf /etc/nginx/sites-available/default
+# Copy Nginx config template
+COPY docker/nginx.conf /etc/nginx/sites-available/default.template
 
 # Copy built app from builder
 COPY --from=builder /build /app
@@ -70,10 +72,10 @@ RUN mkdir -p /app/storage/logs /app/storage/framework/cache /app/storage/framewo
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost/api/v1/portfolio || exit 1
+    CMD sh -c 'curl -f http://localhost:${PORT:-8080}/api/v1/portfolio || exit 1'
 
 # Expose port
 EXPOSE 8080
 
 # Start services
-CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "export PORT=${PORT:-8080}; envsubst '$PORT' < /etc/nginx/sites-available/default.template > /etc/nginx/sites-available/default && php-fpm -D && nginx -g 'daemon off;'"]
