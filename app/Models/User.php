@@ -6,6 +6,8 @@ namespace App\Models;
 use App\Enums\UserRole;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -14,6 +16,7 @@ use Illuminate\Notifications\Notifiable;
  * @property string $email
  * @property string $password
  * @property \App\Enums\UserRole $role
+ * @property-read \App\Models\Bio|null $bio
  */
 class User extends Authenticatable
 {
@@ -74,5 +77,21 @@ class User extends Authenticatable
         }
 
         return false;
+    }
+
+    /**
+     * @return HasOne<Bio, $this>
+     */
+    public function bio(): HasOne
+    {
+        return $this->hasOne(Bio::class);
+    }
+
+    /**
+     * @return HasMany<Post, $this>
+     */
+    public function posts(): HasMany
+    {
+        return $this->hasMany(Post::class);
     }
 }

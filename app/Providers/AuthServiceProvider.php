@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Enums\UserRole;
 use App\Models\Bio;
+use App\Models\Post;
 use App\Policies\BioPolicy;
+use App\Policies\PostPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -18,6 +21,7 @@ final class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         Bio::class => BioPolicy::class,
+        Post::class => PostPolicy::class,
     ];
 
     /**
@@ -29,7 +33,7 @@ final class AuthServiceProvider extends ServiceProvider
 
         // Define custom gates if needed
         Gate::define('manage-users', function ($user) {
-            return $user->hasRole(\App\Enums\UserRole::Owner);
+            return $user->hasRole(UserRole::Owner);
         });
     }
 }

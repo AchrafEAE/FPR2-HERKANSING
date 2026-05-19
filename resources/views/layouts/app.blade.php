@@ -28,6 +28,12 @@
                     <div class="ml-10 flex items-center space-x-4">
                         @auth
                             <span class="text-gray-700">{{ auth()->user()->email }}</span>
+                            <a href="{{ route('bio.edit') }}" class="text-gray-600 hover:text-gray-900">
+                                Bio
+                            </a>
+                            <a href="{{ route('posts.index') }}" class="text-gray-600 hover:text-gray-900">
+                                Posts
+                            </a>
                             <a href="{{ route('dashboard') }}" class="text-gray-600 hover:text-gray-900">
                                 Dashboard
                             </a>
