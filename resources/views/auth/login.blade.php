@@ -47,7 +47,6 @@
             <div class="form-field">
                 <div class="form-label">
                     <span>Password</span>
-                    <span class="info-badge" title="Wachtwoord tip">i</span>
                 </div>
                 <div class="input-with-action">
                     <input
@@ -61,9 +60,9 @@
                     >
                     <button type="button" class="input-icon-btn" data-password-toggle="password" aria-label="Toon of verberg wachtwoord">👁</button>
                 </div>
-                <div class="password-hint form-help">
-                    <span class="info-badge">i</span>
-                    <span>Kies een wachtwoord dat je nog niet op andere plekken gebruikt en deel het nooit met iemand anders.</span>
+                <div class="password-hint form-help form-tip" tabindex="0">
+                    <span class="form-tip-trigger" aria-hidden="true">i</span>
+                    <span class="form-tip-text">Kies een wachtwoord dat je nog niet op andere plekken gebruikt en deel het nooit met iemand anders.</span>
                 </div>
                 @error('password')
                     <p class="form-error">{{ $message }}</p>
