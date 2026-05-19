@@ -7,7 +7,6 @@
     <title>@yield('title') - Portfolio</title>
 
     {{-- Always load fallback CSS as safety net --}}
-    <!-- Debug: asset URL = {{ asset('css/styles.css') }} -->
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     
     {{-- Load Vite compiled assets in production/dev with HMR --}}
