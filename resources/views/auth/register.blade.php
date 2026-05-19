@@ -9,63 +9,85 @@
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                 Create your account
             </h2>
+            <p class="mt-2 text-center text-sm text-gray-600">Maak eerst een account aan om bio's en posts te beheren.</p>
         </div>
 
-        <form class="mt-8 space-y-6" action="{{ route('register') }}" method="POST">
+        <form class="mt-8 space-y-6 form-card" action="{{ route('register') }}" method="POST">
             @csrf
 
-            <div class="rounded-md shadow-sm space-y-4">
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">
-                        Email address
-                    </label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value="{{ old('email') }}"
-                        class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                        placeholder="your@email.com"
-                    >
-                    @error('email')
-                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
-                    @enderror
+            @if ($errors->any())
+                <div class="form-error-summary">
+                    <strong>Controleer je invoer.</strong>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
+            @endif
 
-                <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700">
-                        Password
-                    </label>
+            <div class="form-field">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autocomplete="email"
+                    value="{{ old('email') }}"
+                    class="form-input @error('email') is-invalid @enderror"
+                    placeholder="jij@voorbeeld.nl"
+                >
+                <p class="form-help">Gebruik een e-mailadres dat je direct kunt openen voor bevestigingen en meldingen.</p>
+                @error('email')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="form-field">
+                <div class="form-label">
+                    <span>Password</span>
+                    <span class="info-badge" title="Wachtwoord tip">i</span>
+                </div>
+                <div class="input-with-action">
                     <input
                         id="password"
                         name="password"
                         type="password"
                         required
-                        class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                        placeholder="Minimum 8 characters"
+                        autocomplete="new-password"
+                        class="form-input @error('password') is-invalid @enderror"
+                        placeholder="Minimaal 8 tekens"
                     >
-                    @error('password')
-                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
-                    @enderror
+                    <button type="button" class="input-icon-btn" data-password-toggle="password" aria-label="Toon of verberg wachtwoord">👁</button>
                 </div>
+                <div class="password-hint form-help">
+                    <span class="info-badge">i</span>
+                    <span>Kies een sterk wachtwoord met letters en cijfers. Gebruik dit wachtwoord nergens anders opnieuw.</span>
+                </div>
+                @error('password')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
 
-                <div>
-                    <label for="password_confirmation" class="block text-sm font-medium text-gray-700">
-                        Confirm password
-                    </label>
+            <div class="form-field">
+                <label for="password_confirmation" class="form-label">Confirm password</label>
+                <div class="input-with-action">
                     <input
                         id="password_confirmation"
                         name="password_confirmation"
                         type="password"
                         required
-                        class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                        placeholder="Confirm password"
+                        autocomplete="new-password"
+                        class="form-input @error('password_confirmation') is-invalid @enderror"
+                        placeholder="Herhaal je wachtwoord"
                     >
-                    @error('password_confirmation')
-                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
-                    @enderror
+                    <button type="button" class="input-icon-btn" data-password-toggle="password_confirmation" aria-label="Toon of verberg bevestiging">👁</button>
                 </div>
+                <p class="form-help">Typ exact hetzelfde wachtwoord nog een keer om typefouten te voorkomen.</p>
+                @error('password_confirmation')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
             </div>
 
             <div>
@@ -88,4 +110,20 @@
         </form>
     </div>
 </div>
+
+<script>
+    document.querySelectorAll('[data-password-toggle]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const input = document.getElementById(button.dataset.passwordToggle);
+            if (!input) {
+                return;
+            }
+
+            const nextType = input.type === 'password' ? 'text' : 'password';
+            input.type = nextType;
+            button.textContent = nextType === 'password' ? '👁' : '🙈';
+            button.setAttribute('aria-label', nextType === 'password' ? 'Toon wachtwoord' : 'Verberg wachtwoord');
+        });
+    });
+</script>
 @endsection

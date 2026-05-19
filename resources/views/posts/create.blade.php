@@ -15,6 +15,18 @@
 
         <form method="POST" action="{{ route('posts.store') }}" class="feature-card text-left">
             @csrf
+
+            @if ($errors->any())
+                <div class="form-error-summary">
+                    <strong>Controleer je invoer.</strong>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             @include('posts.form', ['post' => $post])
 
             <div class="mt-6 flex gap-3 flex-wrap">

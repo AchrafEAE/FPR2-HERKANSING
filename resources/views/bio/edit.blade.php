@@ -23,54 +23,73 @@
             @csrf
             @method('PUT')
 
-            <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                    <label for="headline">Headline</label>
-                    <input id="headline" name="headline" type="text" value="{{ old('headline', $bio->headline) }}">
-                    @error('headline')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+            @if ($errors->any())
+                <div class="form-error-summary">
+                    <strong>Controleer je invoer.</strong>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <div class="form-grid form-grid--two">
+                <div class="form-field">
+                    <label for="headline" class="form-label">Headline</label>
+                    <input id="headline" name="headline" type="text" value="{{ old('headline', $bio->headline) }}" class="form-input @error('headline') is-invalid @enderror" placeholder="Laravel developer / Front-end engineer">
+                    <p class="form-help">Een korte titel die meteen laat zien wat je doet.</p>
+                    @error('headline')<p class="form-error">{{ $message }}</p>@enderror
                 </div>
 
-                <div>
-                    <label for="years_experience">Ervaring (jaren)</label>
-                    <input id="years_experience" name="years_experience" type="number" min="0" max="60" value="{{ old('years_experience', $bio->years_experience) }}">
-                    @error('years_experience')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+                <div class="form-field">
+                    <label for="years_experience" class="form-label">Ervaring (jaren)</label>
+                    <input id="years_experience" name="years_experience" type="number" min="0" max="60" value="{{ old('years_experience', $bio->years_experience) }}" class="form-input @error('years_experience') is-invalid @enderror" placeholder="5">
+                    <p class="form-help">Vul een realistisch aantal jaren in.</p>
+                    @error('years_experience')<p class="form-error">{{ $message }}</p>@enderror
                 </div>
 
-                <div>
-                    <label for="location">Locatie</label>
-                    <input id="location" name="location" type="text" value="{{ old('location', $bio->location) }}">
-                    @error('location')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+                <div class="form-field">
+                    <label for="location" class="form-label">Locatie</label>
+                    <input id="location" name="location" type="text" value="{{ old('location', $bio->location) }}" class="form-input @error('location') is-invalid @enderror" placeholder="Amsterdam">
+                    <p class="form-help">Plaats of regio waar je werkt of woont.</p>
+                    @error('location')<p class="form-error">{{ $message }}</p>@enderror
                 </div>
 
-                <div>
-                    <label for="availability">Beschikbaarheid</label>
-                    <input id="availability" name="availability" type="text" value="{{ old('availability', $bio->availability) }}">
-                    @error('availability')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+                <div class="form-field">
+                    <label for="availability" class="form-label">Beschikbaarheid</label>
+                    <input id="availability" name="availability" type="text" value="{{ old('availability', $bio->availability) }}" class="form-input @error('availability') is-invalid @enderror" placeholder="Open for work">
+                    <p class="form-help">Bijvoorbeeld full-time, freelance of open for work.</p>
+                    @error('availability')<p class="form-error">{{ $message }}</p>@enderror
                 </div>
 
-                <div>
-                    <label for="website_url">Website</label>
-                    <input id="website_url" name="website_url" type="url" value="{{ old('website_url', $bio->website_url) }}">
-                    @error('website_url')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+                <div class="form-field">
+                    <label for="website_url" class="form-label">Website</label>
+                    <input id="website_url" name="website_url" type="url" value="{{ old('website_url', $bio->website_url) }}" class="form-input @error('website_url') is-invalid @enderror" placeholder="https://jouwsite.nl">
+                    <p class="form-help">Laat leeg als je geen eigen website hebt.</p>
+                    @error('website_url')<p class="form-error">{{ $message }}</p>@enderror
                 </div>
 
-                <div>
-                    <label for="linkedin_url">LinkedIn</label>
-                    <input id="linkedin_url" name="linkedin_url" type="url" value="{{ old('linkedin_url', $bio->linkedin_url) }}">
-                    @error('linkedin_url')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+                <div class="form-field">
+                    <label for="linkedin_url" class="form-label">LinkedIn</label>
+                    <input id="linkedin_url" name="linkedin_url" type="url" value="{{ old('linkedin_url', $bio->linkedin_url) }}" class="form-input @error('linkedin_url') is-invalid @enderror" placeholder="https://linkedin.com/in/jij">
+                    <p class="form-help">Zorg dat de link direct naar jouw profiel verwijst.</p>
+                    @error('linkedin_url')<p class="form-error">{{ $message }}</p>@enderror
                 </div>
 
-                <div>
-                    <label for="github_url">GitHub</label>
-                    <input id="github_url" name="github_url" type="url" value="{{ old('github_url', $bio->github_url) }}">
-                    @error('github_url')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+                <div class="form-field">
+                    <label for="github_url" class="form-label">GitHub</label>
+                    <input id="github_url" name="github_url" type="url" value="{{ old('github_url', $bio->github_url) }}" class="form-input @error('github_url') is-invalid @enderror" placeholder="https://github.com/jij">
+                    <p class="form-help">Deel hier je profiel als je werk wilt laten zien.</p>
+                    @error('github_url')<p class="form-error">{{ $message }}</p>@enderror
                 </div>
             </div>
 
-            <div class="mt-4">
-                <label for="summary">Summary</label>
-                <textarea id="summary" name="summary" rows="7">{{ old('summary', $bio->summary) }}</textarea>
-                @error('summary')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
+            <div class="mt-4 form-field">
+                <label for="summary" class="form-label">Summary</label>
+                <textarea id="summary" name="summary" rows="7" class="form-textarea @error('summary') is-invalid @enderror" placeholder="Beschrijf kort wie je bent, wat je doet en waar je goed in bent.">{{ old('summary', $bio->summary) }}</textarea>
+                <p class="form-help">Schrijf in gewone taal en houd het concreet.</p>
+                @error('summary')<p class="form-error">{{ $message }}</p>@enderror
             </div>
 
             <div class="mt-6 flex gap-3 flex-wrap">
