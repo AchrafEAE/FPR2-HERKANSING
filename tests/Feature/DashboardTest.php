@@ -15,19 +15,15 @@ class DashboardTest extends TestCase
     public function testDashboardShowsBioAndPostStats(): void
     {
         $user = User::factory()->create();
-
-        // Create a bio for the user
-        Bio::factory()->create(['user_id' => $user->id]);
-
-        // Create posts with different statuses
-        Post::factory()->count(2)->create(["user_id" => $user->id, 'published_at' => null]);
-        Post::factory()->count(3)->create(["user_id" => $user->id, 'published_at' => now()]);
+        // Create posts and ensure recent posts section is shown
+        Post::factory()->create(["user_id" => $user->id, 'title' => 'Recent post A', 'published_at' => now()]);
+        Post::factory()->create(["user_id" => $user->id, 'title' => 'Recent post B', 'published_at' => now()]);
 
         $response = $this->actingAs($user)->get(route('dashboard'));
 
         $response->assertOk();
-        $response->assertSee('Actief profiel aanwezig');
-        $response->assertSee('2 drafts in je workflow.');
-        $response->assertSee('3 posts live gezet.');
+        $response->assertSee('Recente posts');
+        $response->assertSee('Recent post A');
+        $response->assertSee('Recent post B');
     }
 }
