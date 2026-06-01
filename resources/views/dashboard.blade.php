@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        
+
 
         <section class="mt-10">
             <div class="flex items-center justify-between gap-3 mb-4">
