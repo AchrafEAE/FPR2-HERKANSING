@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Mijn Bio')
+@section('title', 'Mijn bio')
 
 @section('content')
 <div class="hero">
     <div class="hero-inner max-w-3xl mx-auto px-6">
         <div class="flex items-center justify-between gap-4 flex-wrap mb-8">
             <div>
-                <h1 class="hero-title">Mijn bio</h1>
+                <h1 class="hero-title">{{ $bio ? $bio->headline : 'Mijn bio' }}</h1>
                 <p class="hero-sub">Bekijk je profielgegevens</p>
             </div>
             <div class="flex gap-3">
@@ -15,15 +15,44 @@
             </div>
         </div>
 
-        <div class="feature-card">
-            @if ($bio)
-                <h2 class="text-xl font-semibold">{{ $bio->headline }}</h2>
-                <p class="mt-2">{{ $bio->summary }}</p>
-                <p class="mt-4 text-sm text-gray-600">{{ $bio->availability }}</p>
-            @else
+        @if ($bio)
+            <div class="feature-card">
+                <div class="prose">
+                    <p class="lead">{{ $bio->summary }}</p>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                    <div>
+                        @if ($bio->location)
+                            <p><strong>Locatie:</strong> {{ $bio->location }}</p>
+                        @endif
+                        @if ($bio->availability)
+                            <p><strong>Beschikbaarheid:</strong> {{ $bio->availability }}</p>
+                        @endif
+                        @if (! is_null($bio->years_experience))
+                            <p><strong>Jaren ervaring:</strong> {{ $bio->years_experience }}</p>
+                        @endif
+                    </div>
+
+                    <div>
+                        @if ($bio->website_url)
+                            <p><strong>Website:</strong> <a href="{{ $bio->website_url }}" target="_blank" rel="noopener">{{ $bio->website_url }}</a></p>
+                        @endif
+                        @if ($bio->linkedin_url)
+                            <p><strong>LinkedIn:</strong> <a href="{{ $bio->linkedin_url }}" target="_blank" rel="noopener">{{ $bio->linkedin_url }}</a></p>
+                        @endif
+                        @if ($bio->github_url)
+                            <p><strong>GitHub:</strong> <a href="{{ $bio->github_url }}" target="_blank" rel="noopener">{{ $bio->github_url }}</a></p>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        @else
+            <div class="feature-card text-left">
+                <h3>Geen bio gevonden</h3>
                 <p>Je hebt nog geen bio ingevuld. Klik op "Bio bewerken" om er één aan te maken.</p>
-            @endif
-        </div>
+            </div>
+        @endif
     </div>
 </div>
 @endsection
