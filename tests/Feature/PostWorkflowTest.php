@@ -20,7 +20,7 @@ class PostWorkflowTest extends TestCase
                 'title' => 'My first workflow post',
                 'body' => 'This is a draft that will be published later.',
             ])
-            ->assertRedirect();
+            ->assertRedirect(route('posts.index'));
 
         $post = Post::query()->where('user_id', $user->id)->firstOrFail();
 

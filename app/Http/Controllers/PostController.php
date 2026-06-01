@@ -36,10 +36,10 @@ class PostController extends Controller
 
         $post = Post::query()->create(array_merge(
             $request->validated(),
-            ['user_id' => $request->user()->id]
+            ['user_id' => $request->user()->id, 'published_at' => now()]
         ));
 
-        return redirect()->route('posts.edit', $post)->with('status', 'Post opgeslagen als concept.');
+        return redirect()->route('posts.index')->with('status', 'Post opgeslagen en gepubliceerd.');
     }
 
     public function show(Post $post): View

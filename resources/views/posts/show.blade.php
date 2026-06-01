@@ -8,7 +8,7 @@
         <div class="flex items-center justify-between gap-4 flex-wrap mb-8">
             <div>
                 <h1 class="hero-title">{{ $post->title }}</h1>
-                <p class="hero-sub">{{ $post->published_at ? 'Gepubliceerd op ' . $post->published_at->format('d-m-Y') : 'Concept' }}</p>
+                <p class="hero-sub">{{ $post->published_at ? 'Gepubliceerd op ' . $post->published_at->format('d-m-Y') : '' }}</p>
             </div>
             <div class="flex gap-3 flex-wrap">
                 <a href="{{ route('posts.edit', $post) }}" class="btn-primary">Bewerken</a>
