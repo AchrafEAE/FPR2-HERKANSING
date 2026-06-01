@@ -27,7 +27,7 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4">
                         @auth
-                            <a href="{{ route('bio.show') }}" class="text-gray-700">Mijn profiel</a>
+                            <a href="{{ route('bio.public', auth()->user()) }}" class="text-gray-700">Mijn profiel</a>
                             <a href="{{ route('bio.edit') }}" class="text-gray-600 hover:text-gray-900">
                                 Bio
                             </a>

@@ -41,6 +41,13 @@ class BioController extends Controller
         return view('bio.show', compact('bio'));
     }
 
+    public function index(): View
+    {
+        $users = User::with('bio')->get();
+
+        return view('bio.index', compact('users'));
+    }
+
     public function update(ManageBioRequest $request): RedirectResponse
     {
         Bio::query()->updateOrCreate(

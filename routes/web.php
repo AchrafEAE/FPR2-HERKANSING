@@ -35,3 +35,9 @@ Route::middleware('auth')->group(function (): void {
 
     Route::resource('posts', PostController::class);
 });
+
+// Public bio view for any user (visit /bio/{user})
+Route::get('/bio/{user}', [\App\Http\Controllers\BioController::class, 'publicShow'])->name('bio.public');
+
+// Public profiles listing
+Route::get('/profiles', [\App\Http\Controllers\BioController::class, 'index'])->name('profiles.index');

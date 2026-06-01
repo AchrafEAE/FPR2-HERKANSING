@@ -12,7 +12,7 @@
             </div>
             <div class="flex gap-3 flex-wrap">
                 <a href="{{ route('bio.edit') }}" class="btn-primary">Bio beheren</a>
-                <a href="{{ route('posts.index') }}" class="btn-outline">Posts beheren</a>
+                <a href="{{ route('posts.index') }}" class="btn-primary">Posts beheren</a>
             </div>
         </div>
 
@@ -21,7 +21,7 @@
         <section class="mt-10">
             <div class="flex items-center justify-between gap-3 mb-4">
                 <h2 class="text-2xl font-bold">Recente posts</h2>
-                <a href="{{ route('posts.create') }}" class="btn-outline">Nieuwe post</a>
+                <a href="{{ route('posts.create') }}" class="btn-primary">Nieuwe post</a>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
@@ -30,8 +30,8 @@
                     <h3>{{ $post->title }}</h3>
                     <p>{{ \Illuminate\Support\Str::limit($post->body, 140) }}</p>
                     <div class="mt-4 flex gap-3 flex-wrap">
-                        <a href="{{ route('posts.show', $post) }}" class="btn-outline">Bekijk</a>
-                        <a href="{{ route('posts.edit', $post) }}" class="btn-outline">Bewerk</a>
+                        <a href="{{ route('posts.show', $post) }}" class="btn-primary">Bekijk</a>
+                        <a href="{{ route('posts.edit', $post) }}" class="btn-primary">Bewerk</a>
                     </div>
                 </article>
                 @empty
