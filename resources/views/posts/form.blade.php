@@ -19,5 +19,5 @@
         @error('body')<p class="form-error">{{ $message }}</p>@enderror
     </div>
 
-    
+
 </div>
