@@ -23,17 +23,7 @@ Route::post('/logout', [\App\Http\Controllers\Auth\AuthController::class, 'logou
     ->name('logout');
 
 Route::middleware('auth')->group(function (): void {
-    Route::get('/dashboard', function (Request $request) {
-        $bio = Bio::query()->where('user_id', $request->user()->id)->first();
-        $postsQuery = Post::query()->where('user_id', $request->user()->id);
-
-        return view('dashboard', [
-            'bio' => $bio,
-            'posts' => (clone $postsQuery)->latest()->limit(5)->get(),
-            'draftCount' => (clone $postsQuery)->where('status', 'draft')->count(),
-            'publishedCount' => (clone $postsQuery)->where('status', 'published')->count(),
-        ]);
-    })->name('dashboard');
+    Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/bio', [BioController::class, 'edit'])->name('bio.edit');
     Route::put('/bio', [BioController::class, 'update'])->name('bio.update');
