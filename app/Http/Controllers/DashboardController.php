@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Enums\PostStatus;
 use App\Models\Bio;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -21,8 +20,8 @@ final class DashboardController
         return view('dashboard', [
             'bio' => $bio,
             'posts' => (clone $postsQuery)->latest()->limit(5)->get(),
-            'draftCount' => (clone $postsQuery)->where('status', PostStatus::Draft->value)->count(),
-            'publishedCount' => (clone $postsQuery)->where('status', PostStatus::Published->value)->count(),
+            'draftCount' => (clone $postsQuery)->whereNull('published_at')->count(),
+            'publishedCount' => (clone $postsQuery)->whereNotNull('published_at')->count(),
         ]);
     }
 }

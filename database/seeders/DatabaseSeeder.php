@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             ]);
 
             Post::factory()->count(3)->for($user)->create([
-                'status' => PostStatus::Draft,
+                'published_at' => null,
             ]);
         }
     }

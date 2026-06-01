@@ -40,7 +40,6 @@
             <div class="grid md:grid-cols-2 gap-6">
                 @forelse ($posts as $post)
                     <article class="feature-card text-left">
-                        <p class="text-sm text-gray-600">{{ ucfirst(str_replace('_', ' ', $post->status->value)) }}</p>
                         <h3>{{ $post->title }}</h3>
                         <p>{{ \Illuminate\Support\Str::limit($post->body, 140) }}</p>
                         <div class="mt-4 flex gap-3 flex-wrap">

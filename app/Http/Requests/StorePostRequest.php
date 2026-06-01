@@ -19,7 +19,6 @@ class StorePostRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'max:150'],
             'body' => ['required', 'string', 'max:5000'],
-            'status' => ['required', 'in:draft,in_review'],
         ];
     }
 }

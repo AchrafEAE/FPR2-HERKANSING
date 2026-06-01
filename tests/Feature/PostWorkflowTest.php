@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Enums\PostStatus;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -20,7 +19,6 @@ class PostWorkflowTest extends TestCase
             ->post(route('posts.store'), [
                 'title' => 'My first workflow post',
                 'body' => 'This is a draft that will be published later.',
-                'status' => PostStatus::Draft->value,
             ])
             ->assertRedirect();
 
@@ -37,7 +35,7 @@ class PostWorkflowTest extends TestCase
 
         $post->refresh();
 
-        $this->assertSame(PostStatus::Published, $post->status);
+        $this->assertNotNull($post->published_at);
         $this->assertNotNull($post->published_at);
 
         $this->actingAs($user)

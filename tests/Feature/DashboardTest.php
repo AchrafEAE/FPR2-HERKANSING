@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Enums\PostStatus;
 use App\Models\Bio;
 use App\Models\Post;
 use App\Models\User;
@@ -21,8 +20,8 @@ class DashboardTest extends TestCase
         Bio::factory()->create(['user_id' => $user->id]);
 
         // Create posts with different statuses
-        Post::factory()->count(2)->create(["user_id" => $user->id, 'status' => PostStatus::Draft->value]);
-        Post::factory()->count(3)->create(["user_id" => $user->id, 'status' => PostStatus::Published->value]);
+        Post::factory()->count(2)->create(["user_id" => $user->id, 'published_at' => null]);
+        Post::factory()->count(3)->create(["user_id" => $user->id, 'published_at' => now()]);
 
         $response = $this->actingAs($user)->get(route('dashboard'));
 

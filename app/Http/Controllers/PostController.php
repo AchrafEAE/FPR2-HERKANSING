@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\PostStatus;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\Post;
@@ -26,9 +25,7 @@ class PostController extends Controller
     {
         $this->authorize('create', Post::class);
 
-        $post = new Post([
-            'status' => PostStatus::Draft,
-        ]);
+        $post = new Post();
 
         return view('posts.create', compact('post'));
     }
@@ -82,7 +79,6 @@ class PostController extends Controller
         $this->authorize('publish', $post);
 
         $post->update([
-            'status' => PostStatus::Published,
             'published_at' => now(),
         ]);
 
