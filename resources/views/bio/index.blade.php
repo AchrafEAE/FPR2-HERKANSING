@@ -14,17 +14,17 @@
 
         <div class="grid md:grid-cols-2 gap-6">
             @foreach ($users as $user)
-                <article class="feature-card">
-                    <h3 class="font-semibold">{{ $user->email }}</h3>
-                    @if ($user->bio)
-                        <p class="text-sm text-gray-700 mt-2">{{ \Illuminate\Support\Str::limit($user->bio->summary, 160) }}</p>
-                        <div class="mt-3 flex gap-3">
-                            <a href="{{ route('bio.public', $user) }}" class="btn-outline">Bekijk profiel</a>
-                        </div>
-                    @else
-                        <p class="text-sm text-gray-500 mt-2">Geen bio beschikbaar</p>
-                    @endif
-                </article>
+            <article class="feature-card">
+                <h3 class="font-semibold">{{ $user->email }}</h3>
+                @if ($user->bio)
+                <p class="text-sm text-gray-700 mt-2">{{ \Illuminate\Support\Str::limit($user->bio->summary, 160) }}</p>
+                <div class="mt-3 flex gap-3">
+                    <a href="{{ route('bio.public', $user) }}" class="btn-outline">Bekijk profiel</a>
+                </div>
+                @else
+                <p class="text-sm text-gray-500 mt-2">Geen bio beschikbaar</p>
+                @endif
+            </article>
             @endforeach
         </div>
     </div>
