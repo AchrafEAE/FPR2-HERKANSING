@@ -29,7 +29,8 @@ Route::post('/logout', [\App\Http\Controllers\Auth\AuthController::class, 'logou
 Route::middleware('auth')->group(function (): void {
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('/bio', [BioController::class, 'edit'])->name('bio.edit');
+    Route::get('/bio', [BioController::class, 'show'])->name('bio.show');
+    Route::get('/bio/edit', [BioController::class, 'edit'])->name('bio.edit');
     Route::put('/bio', [BioController::class, 'update'])->name('bio.update');
 
     Route::resource('posts', PostController::class);

@@ -7,6 +7,9 @@ use App\Models\Bio;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use App\Models\User;
+
+use Illuminate\Support\Arr;
 
 class BioController extends Controller
 {
@@ -22,6 +25,20 @@ class BioController extends Controller
         );
 
         return view('bio.edit', compact('bio'));
+    }
+
+    public function show(Request $request): View
+    {
+        $bio = Bio::query()->where('user_id', $request->user()->getKey())->first();
+
+        return view('bio.show', compact('bio'));
+    }
+
+    public function publicShow(User $user): View
+    {
+        $bio = Bio::query()->where('user_id', $user->getKey())->first();
+
+        return view('bio.show', compact('bio'));
     }
 
     public function update(ManageBioRequest $request): RedirectResponse
