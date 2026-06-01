@@ -39,19 +39,19 @@
 
             <div class="grid md:grid-cols-2 gap-6">
                 @forelse ($posts as $post)
-                    <article class="feature-card text-left">
-                        <h3>{{ $post->title }}</h3>
-                        <p>{{ \Illuminate\Support\Str::limit($post->body, 140) }}</p>
-                        <div class="mt-4 flex gap-3 flex-wrap">
-                            <a href="{{ route('posts.show', $post) }}" class="btn-outline">Bekijk</a>
-                            <a href="{{ route('posts.edit', $post) }}" class="btn-outline">Bewerk</a>
-                        </div>
-                    </article>
-                @empty
-                    <div class="feature-card text-left md:col-span-2">
-                        <h3>Nog geen posts</h3>
-                        <p>Maak je eerste concept aan om je workflow op te starten.</p>
+                <article class="feature-card text-left">
+                    <h3>{{ $post->title }}</h3>
+                    <p>{{ \Illuminate\Support\Str::limit($post->body, 140) }}</p>
+                    <div class="mt-4 flex gap-3 flex-wrap">
+                        <a href="{{ route('posts.show', $post) }}" class="btn-outline">Bekijk</a>
+                        <a href="{{ route('posts.edit', $post) }}" class="btn-outline">Bewerk</a>
                     </div>
+                </article>
+                @empty
+                <div class="feature-card text-left md:col-span-2">
+                    <h3>Nog geen posts</h3>
+                    <p>Maak je eerste concept aan om je workflow op te starten.</p>
+                </div>
                 @endforelse
             </div>
         </section>

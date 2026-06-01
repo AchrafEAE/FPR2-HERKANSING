@@ -17,31 +17,31 @@
         </div>
 
         @if (session('status'))
-            <div class="feature-card mb-6 text-left">
-                {{ session('status') }}
-            </div>
+        <div class="feature-card mb-6 text-left">
+            {{ session('status') }}
+        </div>
         @endif
 
         <div class="grid md:grid-cols-2 gap-6">
-                @forelse ($posts as $post)
-                <article class="feature-card text-left">
-                    <h3>{{ $post->title }}</h3>
-                    <p>{{ \Illuminate\Support\Str::limit($post->body, 140) }}</p>
-                    <div class="mt-4 flex gap-3 flex-wrap">
-                        <a href="{{ route('posts.show', $post) }}" class="btn-outline">Bekijk</a>
-                        <a href="{{ route('posts.edit', $post) }}" class="btn-outline">Bewerk</a>
-                        <form method="POST" action="{{ route('posts.destroy', $post) }}" class="inline">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn-outline">Verwijder</button>
-                        </form>
-                    </div>
-                </article>
-            @empty
-                <div class="feature-card text-left md:col-span-2">
-                    <h3>Geen posts gevonden</h3>
-                    <p>Maak je eerste concept aan om de workflow te starten.</p>
+            @forelse ($posts as $post)
+            <article class="feature-card text-left">
+                <h3>{{ $post->title }}</h3>
+                <p>{{ \Illuminate\Support\Str::limit($post->body, 140) }}</p>
+                <div class="mt-4 flex gap-3 flex-wrap">
+                    <a href="{{ route('posts.show', $post) }}" class="btn-outline">Bekijk</a>
+                    <a href="{{ route('posts.edit', $post) }}" class="btn-outline">Bewerk</a>
+                    <form method="POST" action="{{ route('posts.destroy', $post) }}" class="inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn-outline">Verwijder</button>
+                    </form>
                 </div>
+            </article>
+            @empty
+            <div class="feature-card text-left md:col-span-2">
+                <h3>Geen posts gevonden</h3>
+                <p>Maak je eerste concept aan om de workflow te starten.</p>
+            </div>
             @endforelse
         </div>
     </div>
