@@ -37,9 +37,9 @@
 
                         <div class="ml-auto relative">
                             <details class="relative">
-                                <summary class="cursor-pointer text-gray-700 list-none">Mijn profiel ▼</summary>
+                                    <summary class="cursor-pointer text-gray-700 list-none">{{ auth()->user()->email }} ▼</summary>
                                 <div class="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50 py-2">
-                                    <a href="{{ route('bio.public', auth()->user()) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mijn profiel</a>
+                                        <a href="{{ route('bio.public', auth()->user()) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ auth()->user()->email }}</a>
                                     <a href="{{ route('profiles.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profielen</a>
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
