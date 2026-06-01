@@ -16,20 +16,7 @@
             </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 mt-10">
-            <div class="feature-card text-left">
-                <h3>Bio status</h3>
-                <p>{{ $bio ? 'Actief profiel aanwezig' : 'Nog geen bio aangemaakt' }}</p>
-            </div>
-            <div class="feature-card text-left">
-                <h3>Concepten</h3>
-                <p>{{ $draftCount }} drafts in je workflow.</p>
-            </div>
-            <div class="feature-card text-left">
-                <h3>Gepubliceerd</h3>
-                <p>{{ $publishedCount }} posts live gezet.</p>
-            </div>
-        </div>
+        
 
         <section class="mt-10">
             <div class="flex items-center justify-between gap-3 mb-4">
