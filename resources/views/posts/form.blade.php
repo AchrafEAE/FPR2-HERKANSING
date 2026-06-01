@@ -19,17 +19,5 @@
         @error('body')<p class="form-error">{{ $message }}</p>@enderror
     </div>
 
-    <div class="form-field">
-        <label for="status" class="form-label">Status <p class="form-help form-tip" tabindex="0">
-                <span class="form-tip-trigger" aria-hidden="true">i</span>
-                <span class="form-tip-text">Kies hier de fase waarin je post zich nu bevindt.</span>
-            </p></label>
-        <select id="status" name="status" class="form-select @error('status') is-invalid @enderror">
-            <option value="draft" @selected(old('status', $post->status?->value ?? 'draft') === 'draft')>Draft</option>
-            <option value="in_review" @selected(old('status', $post->status?->value ?? 'draft') === 'in_review')>In review</option>
-            <option value="published" @selected(old('status', $post->status?->value ?? 'draft') === 'published')>Published</option>
-        </select>
-
-        @error('status')<p class="form-error">{{ $message }}</p>@enderror
-    </div>
+    
 </div>

@@ -11,7 +11,7 @@ class PostWorkflowTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testAuthenticatedUserCanCreatePublishAndViewPosts(): void
+    public function testAuthenticatedUserCanCreateAndViewPosts(): void
     {
         $user = User::factory()->create();
 
@@ -28,16 +28,6 @@ class PostWorkflowTest extends TestCase
             ->get(route('posts.index'))
             ->assertOk()
             ->assertSee('My first workflow post');
-
-        $this->actingAs($user)
-            ->post(route('posts.publish', $post))
-            ->assertRedirect(route('posts.show', $post));
-
-        $post->refresh();
-
-        $this->assertNotNull($post->published_at);
-        $this->assertNotNull($post->published_at);
-
         $this->actingAs($user)
             ->get(route('posts.show', $post))
             ->assertOk()

@@ -73,15 +73,4 @@ class PostController extends Controller
 
         return redirect()->route('posts.index')->with('status', 'Post verwijderd.');
     }
-
-    public function publish(Post $post): RedirectResponse
-    {
-        $this->authorize('publish', $post);
-
-        $post->update([
-            'published_at' => now(),
-        ]);
-
-        return redirect()->route('posts.show', $post)->with('status', 'Post gepubliceerd.');
-    }
 }

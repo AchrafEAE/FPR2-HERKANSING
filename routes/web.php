@@ -33,5 +33,4 @@ Route::middleware('auth')->group(function (): void {
     Route::put('/bio', [BioController::class, 'update'])->name('bio.update');
 
     Route::resource('posts', PostController::class);
-    Route::post('/posts/{post}/publish', [PostController::class, 'publish'])->name('posts.publish');
 });

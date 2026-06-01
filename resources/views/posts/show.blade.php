@@ -25,12 +25,6 @@
         <article class="feature-card text-left">
             <p>{!! nl2br(e($post->body)) !!}</p>
             <div class="mt-6 flex gap-3 flex-wrap">
-                @if (is_null($post->published_at))
-                <form method="POST" action="{{ route('posts.publish', $post) }}" class="inline">
-                    @csrf
-                    <button type="submit" class="btn-outline">Publiceren</button>
-                </form>
-                @endif
                 <form method="POST" action="{{ route('posts.destroy', $post) }}" class="inline">
                     @csrf
                     @method('DELETE')
