@@ -14,6 +14,7 @@ final class DashboardController
 {
     public function index(Request $request): View
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
 
         $bio = Bio::query()->where('user_id', $user->id)->first();

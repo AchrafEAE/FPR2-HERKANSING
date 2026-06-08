@@ -30,8 +30,8 @@
                     <div class="ml-10 flex items-center space-x-4 w-full">
                         @auth
                         <div class="flex items-center space-x-4">
-                            <a href="{{ route('posts.index') }}" class="text-gray-600 hover:text-gray-900">Posts</a>
                             <a href="{{ route('dashboard') }}" class="text-gray-600 hover:text-gray-900">Dashboard</a>
+                            <a href="{{ route('posts.index') }}" class="text-gray-600 hover:text-gray-900">Posts</a>
                             <a href="{{ route('profiles.index') }}" class="text-gray-600 hover:text-gray-900">Profielen</a>
                             <a href="{{ route('frontend-demo') }}" class="text-gray-600 hover:text-gray-900">API Demo</a>
                         </div>

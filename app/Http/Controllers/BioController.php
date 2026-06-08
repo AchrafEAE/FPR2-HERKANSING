@@ -16,8 +16,11 @@ class BioController extends Controller
 {
     public function edit(Request $request): View
     {
+        /** @var \App\Models\User $user */
+        $user = $request->user();
+
         $bio = Bio::query()->firstOrNew(
-            ['user_id' => $request->user()->id],
+            ['user_id' => $user->id],
             [
                 'headline' => 'Werk je bio bij',
                 'summary' => 'Beschrijf hier kort je achtergrond, focus en beschikbare vaardigheden.',
@@ -30,8 +33,9 @@ class BioController extends Controller
 
     public function show(Request $request): View
     {
+        /** @var \App\Models\User $user */
         $user = $request->user();
-        $bio = Bio::query()->where('user_id', $user->getKey())->first();
+        $bio = Bio::query()->where('user_id', $user->id)->first();
 
         $studyResults = StudyResult::query()
             ->where('user_id', $user->id)
@@ -74,9 +78,12 @@ class BioController extends Controller
 
     public function update(ManageBioRequest $request): RedirectResponse
     {
+        /** @var \App\Models\User $user */
+        $user = $request->user();
+
         Bio::query()->updateOrCreate(
-            ['user_id' => $request->user()->id],
-            array_merge($request->validated(), ['user_id' => $request->user()->id])
+            ['user_id' => $user->id],
+            array_merge($request->validated(), ['user_id' => $user->id])
         );
 
         return redirect()->route('bio.edit')->with('status', 'Bio succesvol opgeslagen.');
