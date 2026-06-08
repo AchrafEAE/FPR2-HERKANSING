@@ -48,7 +48,24 @@ De applicatie is getoetst aan de 10 usability heuristics van Jakob Nielsen.
 
 ---
 
-## 3. Kleurenpalet & Typografie
+## 3. Client-Side API Integratie (Section 3.6)
+
+De applicatie demonstreert moderne client-side interactie via de `fetch()` API.
+
+### Interne API Endpoints
+Er zijn twee publieke GET endpoints beschikbaar in de backend:
+1.  `/api/v1/portfolio`: Retourneert de meest recente professionele bio en eigenaarsgegevens.
+2.  `/api/v1/stats`: Retourneert live statistieken zoals het totaal aantal gebruikers en gepubliceerde posts.
+
+### Frontend Demo
+De pagina `/frontend-demo` fungeert als showcase voor deze technieken:
+-   **Dynamic Data:** Bij het laden van de pagina wordt data van beide interne endpoints asynchroon opgehaald.
+-   **External Service:** Er wordt tevens gecommuniceerd met een externe API (ZenQuotes) om een motiverende quote te tonen, wat de integratie met externe ecosystemen aantoont.
+-   **Real-time Update:** De UI wordt direct bijgewerkt zonder de pagina te herladen zodra de JSON-data is ontvangen.
+
+---
+
+## 4. Kleurenpalet & Typografie
 *   **Primary:** Blue-600 (Acties, knoppen)
 *   **Background:** Gray-100 (Neutrale achtergrond voor focus op kaarten)
 *   **Text:** Gray-900 (Hoge leesbaarheid)

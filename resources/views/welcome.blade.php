@@ -14,7 +14,7 @@
         @guest
             <div class="flex justify-center gap-4 mb-16">
                 <a href="{{ route('login') }}" class="btn-primary px-8 py-3">Inloggen</a>
-                <a href="{{ route('register') }}" class="btn-outline px-8 py-3">Registreren</a>
+                <a href="{{ route('register') }}" class="btn-primary px-8 py-3">Registreren</a>
             </div>
         @else
             <div class="mb-16">

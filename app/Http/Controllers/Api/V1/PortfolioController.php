@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bio;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\JsonResponse;
 
 class PortfolioController extends Controller
@@ -35,6 +37,18 @@ class PortfolioController extends Controller
                 'github_url' => $bio->github_url,
                 'years_experience' => $bio->years_experience,
                 'updated_at' => $bio->updated_at,
+            ],
+        ]);
+    }
+
+    public function stats(): JsonResponse
+    {
+        return response()->json([
+            'data' => [
+                'total_users' => User::query()->count(),
+                'total_posts' => Post::query()->whereNotNull('published_at')->count(),
+                'server_time' => now()->toDateTimeString(),
+                'status' => 'operational',
             ],
         ]);
     }
