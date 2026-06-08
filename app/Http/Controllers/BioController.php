@@ -29,16 +29,27 @@ class BioController extends Controller
 
     public function show(Request $request): View
     {
-        $bio = Bio::query()->where('user_id', $request->user()->getKey())->first();
+        $user = $request->user();
+        $bio = Bio::query()->where('user_id', $user->getKey())->first();
 
-        return view('bio.show', compact('bio'));
+        return view('bio.show', [
+            'bio' => $bio,
+            'user' => $user,
+            'studyProgress' => config('portfolio.study_progress'),
+            'isOwner' => true,
+        ]);
     }
 
     public function publicShow(User $user): View
     {
         $bio = Bio::query()->where('user_id', $user->getKey())->first();
 
-        return view('bio.show', compact('bio'));
+        return view('bio.show', [
+            'bio' => $bio,
+            'user' => $user,
+            'studyProgress' => config('portfolio.study_progress'),
+            'isOwner' => false,
+        ]);
     }
 
     public function index(): View

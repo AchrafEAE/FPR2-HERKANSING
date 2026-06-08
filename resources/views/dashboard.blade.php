@@ -16,6 +16,10 @@
             </div>
         </div>
 
+        <div class="mt-10">
+            @include('partials.study-progress', ['studyProgress' => $studyProgress])
+        </div>
+
 
 
         <section class="mt-10">
