@@ -27,7 +27,9 @@ class PublicBioTest extends TestCase
         $response->assertSee('Laravel developer');
         $response->assertSee('Ik bouw onderhoudbare webapplicaties en dashboards.');
         $response->assertSee('Studievoortgang');
-        $response->assertSee('75%');
+        $response->assertSeeText('Quarter');
+        $response->assertSeeText('Program- & Career Orientation');
+        $response->assertSeeText('Totaal');
         $response->assertDontSee('Bio bewerken');
     }
 }

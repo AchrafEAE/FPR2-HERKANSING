@@ -464,3 +464,146 @@ textarea {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+/* Study progress table */
+.study-progress {
+    overflow: hidden;
+}
+
+.study-progress__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.study-progress__title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.study-progress__description {
+    margin-top: 0.4rem;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.study-progress__table-wrap {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.schema {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #ffffff;
+}
+
+.schema th,
+.schema td {
+    border: 1px solid #dbe3ef;
+    padding: 0.75rem 0.8rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.schema th {
+    background: #eef4ff;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.schema tr.completed {
+    background: #f0fdf4;
+}
+
+.schema tr.bezig {
+    background: #fefce8;
+}
+
+.schema tr.gefaald {
+    background: #fff1f2;
+}
+
+.schema input[type="text"] {
+    width: 100%;
+    min-width: 5rem;
+    padding: 0.5rem 0.65rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.45rem;
+    background: #ffffff;
+    color: #0f172a;
+    box-sizing: border-box;
+}
+
+.schema input[type="text"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.progress-bar-container {
+    margin-top: 1.25rem;
+    background: #e2e8f0;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 0.9rem;
+    width: 0;
+    background: #2563eb;
+    transition:
+        width 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.progress-text {
+    margin-top: 0.65rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.color-container {
+    margin-top: 1.25rem;
+}
+
+.color-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #475569;
+    font-size: 0.92rem;
+}
+
+.color-container li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-box {
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 0.2rem;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    .study-progress__header {
+        flex-direction: column;
+    }
+
+    .schema {
+        min-width: 640px;
+    }
+}

@@ -23,7 +23,9 @@ class DashboardTest extends TestCase
 
         $response->assertOk();
         $response->assertSee('Studievoortgang');
-        $response->assertSee('75%');
+        $response->assertSeeText('Quarter');
+        $response->assertSeeText('Program- & Career Orientation');
+        $response->assertSeeText('Totaal');
         $response->assertSee('Recente posts');
         $response->assertSee('Recent post A');
         $response->assertSee('Recent post B');
