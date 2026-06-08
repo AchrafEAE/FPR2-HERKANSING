@@ -19,10 +19,10 @@
         <h3 class="text-sm font-semibold uppercase tracking-wide text-gray-500">Mijlpalen</h3>
         <ul class="mt-3 space-y-3">
             @foreach ($studyProgress['milestones'] as $milestone)
-                <li class="flex items-center justify-between gap-4 text-sm">
-                    <span class="text-gray-700">{{ $milestone['label'] }}</span>
-                    <span class="font-medium text-gray-900">{{ $milestone['status'] }}</span>
-                </li>
+            <li class="flex items-center justify-between gap-4 text-sm">
+                <span class="text-gray-700">{{ $milestone['label'] }}</span>
+                <span class="font-medium text-gray-900">{{ $milestone['status'] }}</span>
+            </li>
             @endforeach
         </ul>
     </div>
