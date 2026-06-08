@@ -8,8 +8,8 @@ class UpdateBioRequest extends FormRequest
 {
     public function authorize(): bool
     {
-    // Authorize using BioPolicy
-    return $this->user()?->can('update', \App\Models\Bio::class) ?? false;
+        // Authorize using BioPolicy
+        return $this->user()?->can('update', \App\Models\Bio::class) ?? false;
     }
 
     /**

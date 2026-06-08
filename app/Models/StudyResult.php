@@ -14,7 +14,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @mixin \Illuminate\Database\Eloquent\Builder<\App\Models\StudyResult>
  * @method static \Illuminate\Database\Eloquent\Builder<\App\Models\StudyResult> query()
- * @method static \App\Models\StudyResult updateOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
+ * @method static \App\Models\StudyResult updateOrCreate(array<string, mixed> $attributes,
+ *     array<string, mixed> $values = [])
  */
 class StudyResult extends Model
 {
