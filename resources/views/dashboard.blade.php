@@ -8,7 +8,7 @@
         <div class="flex items-center justify-between gap-4 flex-wrap">
             <div>
                 <h1 class="hero-title">Dashboard</h1>
-                <p class="hero-sub">Beheer je bio en workflow-content vanuit één overzicht.</p>
+                <p class="hero-sub">Beheer je bio.</p>
             </div>
             <div class="flex gap-3 flex-wrap">
                 <a href="{{ route('bio.edit') }}" class="btn-primary">Bio beheren</a>

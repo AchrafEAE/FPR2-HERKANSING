@@ -25,91 +25,91 @@ $totalEc = $studyProgress['total_ec'] ?? 60;
                 <td>Program- &amp; Career Orientation</td>
                 <td>Portfolio website presentation</td>
                 <td>2.5 EC</td>
-                <td><input type="text" id="pco" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="pco"></td>
             </tr>
             <tr class="completed">
                 <td>Computer Science Basics</td>
                 <td>Written Exam</td>
                 <td>5 EC</td>
-                <td><input type="text" id="cs" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="cs"></td>
             </tr>
             <tr class="completed">
                 <td>Programming Basics</td>
                 <td>Practical Assignment</td>
                 <td>5 EC</td>
-                <td><input type="text" id="pb" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="pb"></td>
             </tr>
             <tr class="completed">
                 <td rowspan="2">Blok 2</td>
                 <td rowspan="2">Object Oriented Programming</td>
                 <td>Presentation</td>
                 <td>5 EC</td>
-                <td><input type="text" id="OOP" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="OOP"></td>
             </tr>
             <tr class="completed">
                 <td>Written Exam</td>
                 <td>5 EC</td>
-                <td><input type="text" id="WE" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="WE"></td>
             </tr>
             <tr class="bezig">
                 <td rowspan="4">Blok 3</td>
                 <td>Business IT Consultancy Basics</td>
                 <td>Individual Assignment</td>
                 <td>2.5 EC</td>
-                <td><input type="text" id="BICB" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="BICB"></td>
             </tr>
             <tr class="gefaald">
                 <td rowspan="3">Framework Project 1</td>
                 <td>Written Exams</td>
                 <td>5 EC</td>
-                <td><input type="text" id="FP1" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="FP1"></td>
             </tr>
             <tr class="completed">
                 <td>Group Presentation</td>
                 <td>2.5 EC</td>
-                <td><input type="text" id="GP" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="GP"></td>
             </tr>
             <tr class="completed">
                 <td>Group Portfolio</td>
                 <td>2.5 EC</td>
-                <td><input type="text" id="GPo" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="GPo"></td>
             </tr>
             <tr class="bezig">
                 <td rowspan="3">Blok 4</td>
                 <td rowspan="3">Framework Project 2</td>
                 <td>Presentation</td>
                 <td>5 EC</td>
-                <td><input type="text" id="FP2" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="FP2"></td>
             </tr>
             <tr class="bezig">
                 <td>Individual featues</td>
                 <td>2.5 EC</td>
-                <td><input type="text" id="Po" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="Po"></td>
             </tr>
             <tr class="bezig">
                 <td>IT Development Portfolio.</td>
                 <td>2.5 EC</td>
-                <td><input type="text" id="IDPo" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="IDPo"></td>
             </tr>
             <tr class="bezig">
                 <td rowspan="2">Heel het jaar</td>
                 <td>IT Personality</td>
                 <td>Portfolio's</td>
                 <td>2.5 EC</td>
-                <td><input type="text" id="IP" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="IP"></td>
             </tr>
             <tr class="completed">
                 <td>Personal Professional Development: Exploration</td>
                 <td>Portfolio</td>
                 <td>12.5 EC</td>
-                <td><input type="text" id="PPD" inputmode="decimal" placeholder="0"></td>
+                <td><input type="text" id="PPD"></td>
             </tr>
             <tr id="totaal-box" style="background-color: white;">
                 <td><strong>Totaal</strong></td>
                 <td>---</td>
                 <td>---</td>
-                <td>{{ $totalEc }} EC</td>
-                <td id="total">0 EC</td>
+                <td>60 EC</td>
+                <td id="total"></td>
             </tr>
         </table>
     </div>
@@ -117,14 +117,6 @@ $totalEc = $studyProgress['total_ec'] ?? 60;
     <div class="progress-bar-container">
         <div id="progressBar" class="progress-bar"></div>
         <div id="progressText" class="progress-text">0 / {{ $totalEc }} EC</div>
-    </div>
-
-    <div class="color-container">
-        <ul>
-            <li><span class="color-box" style="background-color: yellow;"></span> In Progressie</li>
-            <li><span class="color-box" style="background-color: lightgray;"></span> Nog niet gestart</li>
-            <li><span class="color-box" style="background-color: lightgreen;"></span> Afgerond</li>
-        </ul>
     </div>
 </section>
 
