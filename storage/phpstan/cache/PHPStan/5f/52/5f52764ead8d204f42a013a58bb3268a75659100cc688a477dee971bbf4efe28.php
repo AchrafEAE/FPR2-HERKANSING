@@ -190,7 +190,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Http\\Controllers\\BioController.php' => '2922b02bb0ddb3f5adfdd730b776bfdddd771c8c78ab29443c8135cdbeb7c629',
+      'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Http\\Controllers\\BioController.php' => '79d912b92367a3715a9c81841a7297a85741c9920659c65f60d472cd26814159',
     ),
   ),
 ));

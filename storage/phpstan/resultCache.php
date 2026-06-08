@@ -2347,7 +2347,7 @@ return [
   ),
   'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Http\\Controllers\\BioController.php' => 
   array (
-    'fileHash' => '2922b02bb0ddb3f5adfdd730b776bfdddd771c8c78ab29443c8135cdbeb7c629',
+    'fileHash' => '79d912b92367a3715a9c81841a7297a85741c9920659c65f60d472cd26814159',
     'dependentFiles' => 
     array (
     ),
@@ -2441,7 +2441,7 @@ return [
   ),
   'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Http\\Requests\\UpdateBioRequest.php' => 
   array (
-    'fileHash' => 'd146fa50b9b6174ad08a14a7215d6c6feefb2e98d0d7cdb5f85c460d28ffaeb1',
+    'fileHash' => 'bab3a449031225fbf8c416657fa1a441307e20cc89678e37de7a287c24e1660f',
     'dependentFiles' => 
     array (
       0 => 'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Http\\Controllers\\Api\\V1\\BioController.php',
@@ -2490,7 +2490,7 @@ return [
   ),
   'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Models\\StudyResult.php' => 
   array (
-    'fileHash' => '23d3cb24f82e26c56174fac5cf75fd6fe743b91d9bb365d820aef01534645c6c',
+    'fileHash' => 'd376d7cba708ff6a7f4c24b5d2132a020ad9f3122b8f97c66e9befe542b9d172',
     'dependentFiles' => 
     array (
       0 => 'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Http\\Controllers\\BioController.php',
@@ -4595,7 +4595,7 @@ return [
  * @property \\Illuminate\\Support\\Carbon|null $updated_at
  * @mixin \\Illuminate\\Database\\Eloquent\\Builder<\\App\\Models\\StudyResult>
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<\\App\\Models\\StudyResult> query()
- * @method static \\App\\Models\\StudyResult updateOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
+ * @method static \\App\\Models\\StudyResult updateOrCreate(array<string, mixed> $a, array<string, mixed> $v = [])
  */',
          'namespace' => 'App\\Models',
          'uses' => 

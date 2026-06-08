@@ -2,7 +2,7 @@
 
 // odsl-D:\vscode\FPR HERKANSING\FPR2-HERKANSING\app\Models\StudyResult.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\StudyResult
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.0-8.2.12-23d3cb24f82e26c56174fac5cf75fd6fe743b91d9bb365d820aef01534645c6c',
+   'variableKey' => 'v2-6.70.0.0-8.2.12-d376d7cba708ff6a7f4c24b5d2132a020ad9f3122b8f97c66e9befe542b9d172',
    'data' => 
   array (
     'locatedSource' => 
@@ -31,7 +31,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @property \\Illuminate\\Support\\Carbon|null $updated_at
  * @mixin \\Illuminate\\Database\\Eloquent\\Builder<\\App\\Models\\StudyResult>
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<\\App\\Models\\StudyResult> query()
- * @method static \\App\\Models\\StudyResult updateOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
+ * @method static \\App\\Models\\StudyResult updateOrCreate(array<string, mixed> $a, array<string, mixed> $v = [])
  */',
     'attributes' => 
     array (
@@ -67,9 +67,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'startLine' => 21,
             'endLine' => 25,
             'startTokenPos' => 35,
-            'startFilePos' => 705,
+            'startFilePos' => 691,
             'endTokenPos' => 46,
-            'endFilePos' => 774,
+            'endFilePos' => 760,
           ),
         ),
         'docComment' => NULL,
