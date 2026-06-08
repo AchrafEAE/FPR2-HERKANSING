@@ -12,7 +12,7 @@ Route::get('/', function () {
         return redirect()->route('dashboard');
     }
 
-    return view('portfolio.home');
+    return view('welcome');
 })->name('home');
 
 // Authentication Routes

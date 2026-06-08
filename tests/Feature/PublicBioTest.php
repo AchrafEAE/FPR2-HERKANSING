@@ -26,7 +26,7 @@ class PublicBioTest extends TestCase
         $response->assertOk();
         $response->assertSee('Laravel developer');
         $response->assertSee('Ik bouw onderhoudbare webapplicaties en dashboards.');
-        $response->assertDontSee('Studievoortgang');
+        $response->assertSee('Studievoortgang');
         $response->assertDontSee('Bio bewerken');
     }
 }

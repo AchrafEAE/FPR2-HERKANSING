@@ -52,6 +52,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-10">
+                    <h2 class="text-2xl font-bold mb-4">Studievoortgang</h2>
+                    @include('partials.study-progress', [
+                        'studyProgress' => $studyProgress,
+                        'studyResults' => $studyResults ?? [],
+                        'isOwner' => $isOwner
+                    ])
+                </div>
             @else
                 <div class="feature-card text-left">
                     <h3>Geen bio gevonden</h3>
