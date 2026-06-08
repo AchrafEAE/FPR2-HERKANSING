@@ -8,7 +8,7 @@
             <div class="flex items-center justify-between gap-4 flex-wrap mb-8">
                 <div>
                     <h1 class="hero-title">{{ $bio ? $bio->headline : ($isOwner ? 'Mijn bio' : 'Bio van '.($user->name ?: $user->email)) }}</h1>
-                    <p class="hero-sub">{{ $isOwner ? 'Bekijk je profielgegevens' : 'Bekijk bio en studievoortgang van de eigenaar' }}</p>
+                    <p class="hero-sub">{{ $isOwner ? 'Bekijk je profielgegevens' : 'Bekijk de bio van de eigenaar' }}</p>
                 </div>
                 @if ($isOwner)
                     <div class="flex gap-3">
@@ -51,14 +51,6 @@
                             @endif
                         </div>
                     </div>
-                </div>
-
-                <div class="mt-10">
-                    @include('partials.study-progress', [
-                        'studyProgress' => $studyProgress,
-                        'studyResults' => $studyResults ?? [],
-                        'isOwner' => $isOwner
-                    ])
                 </div>
             @else
                 <div class="feature-card text-left">

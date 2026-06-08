@@ -64,7 +64,7 @@ $studyResults = $studyResults ?? [];
                 <td>2.5 EC</td>
                 <td><input type="text" id="BICB" name="study_results[BICB]" value="{{ $studyResults['BICB'] ?? '' }}"></td>
             </tr>
-            <tr class="gefaald">
+            <tr class="completed">
                 <td rowspan="3">Framework Project 1</td>
                 <td>Written Exams</td>
                 <td>5 EC</td>
@@ -80,14 +80,14 @@ $studyResults = $studyResults ?? [];
                 <td>2.5 EC</td>
                 <td><input type="text" id="GPo" name="study_results[GPo]" value="{{ $studyResults['GPo'] ?? '' }}"></td>
             </tr>
-            <tr class="bezig">
+            <tr class="completed">
                 <td rowspan="3">Blok 4</td>
                 <td rowspan="3">Framework Project 2</td>
                 <td>Presentation</td>
                 <td>2.5 EC</td>
                 <td><input type="text" id="FP2" name="study_results[FP2]" value="{{ $studyResults['FP2'] ?? '' }}"></td>
             </tr>
-            <tr class="bezig">
+            <tr class="completed">
                 <td>Individual featues</td>
                 <td>2.5 EC</td>
                 <td><input type="text" id="Po" name="study_results[Po]" value="{{ $studyResults['Po'] ?? '' }}"></td>
@@ -97,7 +97,7 @@ $studyResults = $studyResults ?? [];
                 <td>5 EC</td>
                 <td><input type="text" id="IDPo" name="study_results[IDPo]" value="{{ $studyResults['IDPo'] ?? '' }}"></td>
             </tr>
-            <tr class="bezig">
+            <tr class="completed">
                 <td rowspan="2">Heel het jaar</td>
                 <td>IT Personality</td>
                 <td>Portfolio's</td>

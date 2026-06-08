@@ -11,7 +11,7 @@ class PublicBioTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testVisitorCanSeePublicBioAndStudyProgress(): void
+    public function testVisitorCanSeePublicBio(): void
     {
         $user = User::factory()->create(['name' => 'Achraf']);
 
@@ -26,10 +26,7 @@ class PublicBioTest extends TestCase
         $response->assertOk();
         $response->assertSee('Laravel developer');
         $response->assertSee('Ik bouw onderhoudbare webapplicaties en dashboards.');
-        $response->assertSee('Studievoortgang');
-        $response->assertSeeText('Quarter');
-        $response->assertSeeText('Program- & Career Orientation');
-        $response->assertSeeText('Totaal');
+        $response->assertDontSee('Studievoortgang');
         $response->assertDontSee('Bio bewerken');
     }
 }

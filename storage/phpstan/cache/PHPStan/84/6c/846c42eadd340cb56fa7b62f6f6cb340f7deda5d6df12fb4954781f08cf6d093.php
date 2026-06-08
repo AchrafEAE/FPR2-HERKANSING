@@ -86,7 +86,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'D:\\vscode\\FPR HERKANSING\\FPR2-HERKANSING\\app\\Http\\Controllers\\BioController.php' => 
     array (
-      0 => '79d912b92367a3715a9c81841a7297a85741c9920659c65f60d472cd26814159',
+      0 => '4be52c6518582c553221f41cf41473d32a90290e7f71795a5584bcd1fcb675b4',
       1 => 
       array (
         0 => 'app\\http\\controllers\\biocontroller',
