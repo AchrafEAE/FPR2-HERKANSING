@@ -33,8 +33,14 @@ Route::middleware('auth')->group(function (): void {
     Route::get('/bio/edit', [BioController::class, 'edit'])->name('bio.edit');
     Route::put('/bio', [BioController::class, 'update'])->name('bio.update');
 
+    Route::post('/study-results', [\App\Http\Controllers\StudyResultController::class, 'store'])->name('study-results.store');
+
     Route::resource('posts', PostController::class);
 });
+
+Route::get('/frontend-demo', function () {
+    return view('portfolio.frontend-demo');
+})->name('frontend-demo');
 
 // Public bio view for any user (visit /bio/{user})
 Route::get('/bio/{user}', [\App\Http\Controllers\BioController::class, 'publicShow'])->name('bio.public');

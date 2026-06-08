@@ -17,7 +17,11 @@
         </div>
 
         <div class="mt-10">
-            @include('partials.study-progress', ['studyProgress' => $studyProgress])
+            @include('partials.study-progress', [
+                'studyProgress' => $studyProgress,
+                'studyResults' => $studyResults ?? [],
+                'isOwner' => true
+            ])
         </div>
 
 

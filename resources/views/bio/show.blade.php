@@ -57,7 +57,10 @@
         @endif
 
         <div class="mt-8">
-            @include('partials.study-progress', ['studyProgress' => $studyProgress])
+            @include('partials.study-progress', [
+                'studyProgress' => $studyProgress,
+                'studyResults' => $studyResults ?? []
+            ])
         </div>
     </div>
 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ManageBioRequest;
 use App\Models\Bio;
+use App\Models\StudyResult;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -32,10 +33,16 @@ class BioController extends Controller
         $user = $request->user();
         $bio = Bio::query()->where('user_id', $user->getKey())->first();
 
+        $studyResults = StudyResult::query()
+            ->where('user_id', $user->id)
+            ->pluck('earned_ec', 'course_code')
+            ->toArray();
+
         return view('bio.show', [
             'bio' => $bio,
             'user' => $user,
             'studyProgress' => config('portfolio.study_progress'),
+            'studyResults' => $studyResults,
             'isOwner' => true,
         ]);
     }
@@ -44,10 +51,16 @@ class BioController extends Controller
     {
         $bio = Bio::query()->where('user_id', $user->getKey())->first();
 
+        $studyResults = StudyResult::query()
+            ->where('user_id', $user->id)
+            ->pluck('earned_ec', 'course_code')
+            ->toArray();
+
         return view('bio.show', [
             'bio' => $bio,
             'user' => $user,
             'studyProgress' => config('portfolio.study_progress'),
+            'studyResults' => $studyResults,
             'isOwner' => false,
         ]);
     }

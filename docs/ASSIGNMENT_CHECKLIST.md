@@ -21,14 +21,14 @@ Hieronder staat een overzicht van de volledige assignment-specificatie en de hui
 ### Features
 - [x] Bio profile CRUD (editor, validations, factories)
 - [x] Blog workflow (Post model, statuses, publish flow)
-- [ ] Progress Dashboard (NOT STARTED)
+- [x] Progress Dashboard (DATABASE INTEGRATED)
 
 ### API & Frontend
 - [x] API endpoints (v1 portfolio, bio, posts)
-- [ ] Fetch-driven frontend demo page (NOT STARTED)
+- [x] Fetch-driven frontend demo page (IMPLEMENTED at /frontend-demo)
 
 ### Usability & Design
-- [ ] Wireflows & Nielsen heuristics documentation (NOT STARTED)
+- [x] Wireflows & Nielsen heuristics documentation (CREATED in docs/DESIGN.md)
 
 ### Testing & Quality
 - [x] PHPUnit tests (36 tests, 97 assertions)
@@ -46,11 +46,11 @@ Hieronder staat een overzicht van de volledige assignment-specificatie en de hui
 - [x] GitHub Actions CI (quality-and-tests)
 
 ### Documentation & Release
-- [-] Docs & GitHub Wiki (IN PROGRESS)
-- [ ] Release runbook & verification (NOT STARTED)
+- [x] Docs & GitHub Wiki (COMPLETED)
+- [x] Release runbook & verification (CREATED docs/RELEASE.md)
 
 ### Innovation & Extras
-- [ ] Innovation feature (Visitor Analytics) (NOT STARTED)
+- [x] Innovation feature (STUDY PROGRESS DATABASE SYNC)
 - [x] Marilyn Monroe easter-egg reference (docs)
 
 ## Kort vervolgadvies
