@@ -32,7 +32,8 @@
                         <div class="flex items-center space-x-4">
                             <a href="{{ route('posts.index') }}" class="text-gray-600 hover:text-gray-900">Posts</a>
                             <a href="{{ route('dashboard') }}" class="text-gray-600 hover:text-gray-900">Dashboard</a>
-                            <a href="{{ route('bio.edit') }}" class="text-gray-600 hover:text-gray-900">Bio</a>
+                            <a href="{{ route('profiles.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profielen</a>
+
                             <a href="{{ route('frontend-demo') }}" class="text-gray-600 hover:text-gray-900">API Demo</a>
                         </div>
 
@@ -41,7 +42,7 @@
                                 <summary class="cursor-pointer text-gray-700 list-none">{{ auth()->user()->email }} ▼</summary>
                                 <div class="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50 py-2">
                                     <a href="{{ route('bio.public', auth()->user()) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ auth()->user()->email }}</a>
-                                    <a href="{{ route('profiles.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profielen</a>
+                                    <a href="{{ route('bio.edit') }}" class="text-gray-600 hover:text-gray-900">Bio</a>
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
                                         <button type="submit" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</button>
