@@ -78,7 +78,7 @@ $totalEc = $studyProgress['total_ec'] ?? 60;
                 <td rowspan="3">Blok 4</td>
                 <td rowspan="3">Framework Project 2</td>
                 <td>Presentation</td>
-                <td>5 EC</td>
+                <td>2.5 EC</td>
                 <td><input type="text" id="FP2"></td>
             </tr>
             <tr class="bezig">
@@ -88,7 +88,7 @@ $totalEc = $studyProgress['total_ec'] ?? 60;
             </tr>
             <tr class="bezig">
                 <td>IT Development Portfolio.</td>
-                <td>2.5 EC</td>
+                <td>5 EC</td>
                 <td><input type="text" id="IDPo"></td>
             </tr>
             <tr class="bezig">
