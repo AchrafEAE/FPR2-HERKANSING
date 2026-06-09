@@ -18,8 +18,8 @@ class PortfolioController extends Controller
         if ($bio === null) {
             return response()->json([
                 'data' => [
-                    'headline' => 'Portfolio in opbouw',
-                    'summary' => 'De professionele bio wordt binnenkort toegevoegd.',
+                    'headline' => 'Portfolio leeg',
+                    'summary' => 'De bio wordt binnenkort toegevoegd.',
                     'owner' => null,
                 ],
             ]);

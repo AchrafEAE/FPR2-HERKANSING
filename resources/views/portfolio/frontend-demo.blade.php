@@ -6,7 +6,7 @@
 <div class="hero">
     <div class="hero-inner max-w-3xl mx-auto px-6">
         <h1 class="hero-title">API Fetch Demo</h1>
-        <p class="hero-sub">Deze pagina haalt data op via de interne API (`/api/v1/portfolio`) met behulp van JavaScript Fetch.</p>
+        <p class="hero-sub">Deze pagina haalt data op via de interne API (`/api/v1/portfolio`) met behulp van Fetch.</p>
 
         <div id="loading" class="mt-8 text-center">
             <p>Data ophalen...</p>
@@ -30,7 +30,7 @@
         </div>
 
         <div id="stats-card" class="feature-card mt-6 hidden">
-            <h3 class="font-bold mb-2 text-gray-700">Live Statistieken (Interne API Endpoint 2)</h3>
+            <h3 class="font-bold mb-2 text-gray-700">Statistieken</h3>
             <div class="grid grid-cols-2 gap-4 text-center">
                 <div class="bg-gray-50 p-3 rounded">
                     <div id="stat-users" class="text-2xl font-bold text-blue-600">-</div>
@@ -38,14 +38,14 @@
                 </div>
                 <div class="bg-gray-50 p-3 rounded">
                     <div id="stat-posts" class="text-2xl font-bold text-blue-600">-</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wide">Publicaties</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wide">Posts</div>
                 </div>
             </div>
-            <p class="text-[10px] text-gray-400 mt-4 text-right italic">Server tijd: <span id="stat-time"></span></p>
+            <p class="text-[10px] text-gray-400 mt-4 text-right italic"><span id="stat-time"></span></p>
         </div>
 
         <div id="external-api-card" class="feature-card mt-6">
-            <h3 class="font-bold mb-2 text-gray-700">Inspiratie (Externe API: ZenQuotes)</h3>
+            <h3 class="font-bold mb-2 text-gray-700">Externe API: ZenQuotes</h3>
             <blockquote id="quote-text" class="italic text-gray-600">"Loading quote..."</blockquote>
             <p id="quote-author" class="text-sm mt-2 text-gray-500">- ...</p>
         </div>
