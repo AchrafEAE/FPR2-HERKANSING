@@ -8,7 +8,7 @@
     <title>@yield('title') - Portfolio</title>
 
     {{-- Always load fallback CSS as safety net --}}
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ filemtime(public_path('css/styles.css')) }}">
 
     {{-- Load Vite compiled assets in production/dev with HMR --}}
     @if (app()->environment('production') || file_exists(public_path('hot')))
@@ -30,10 +30,11 @@
                     <div class="ml-10 flex items-center space-x-4 w-full">
                         @auth
                         <div class="flex items-center space-x-4">
-                            <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'is-active' : '' }}" @if (request()->routeIs('dashboard')) aria-current="page" @endif>Dashboard</a>
-                            <a href="{{ route('posts.index') }}" class="nav-link {{ request()->routeIs('posts.*') ? 'is-active' : '' }}" @if (request()->routeIs('posts.*')) aria-current="page" @endif>Posts</a>
-                            <a href="{{ route('profiles.index') }}" class="nav-link {{ request()->routeIs('profiles.*') ? 'is-active' : '' }}" @if (request()->routeIs('profiles.*')) aria-current="page" @endif>Profielen</a>
-                            <a href="{{ route('frontend-demo') }}" class="nav-link {{ request()->routeIs('frontend-demo') ? 'is-active' : '' }}" @if (request()->routeIs('frontend-demo')) aria-current="page" @endif>API Demo</a>
+                            <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'is-active' : '' }}" @if (request()->routeIs('dashboard')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>Dashboard</a>
+                            <a href="{{ route('bio.edit') }}" class="nav-link {{ request()->routeIs('bio.*') ? 'is-active' : '' }}" @if (request()->routeIs('bio.*')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>Bio</a>
+                            <a href="{{ route('posts.index') }}" class="nav-link {{ request()->routeIs('posts.*') ? 'is-active' : '' }}" @if (request()->routeIs('posts.*')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>Posts</a>
+                            <a href="{{ route('profiles.index') }}" class="nav-link {{ request()->routeIs('profiles.*') ? 'is-active' : '' }}" @if (request()->routeIs('profiles.*')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>Profielen</a>
+                            <a href="{{ route('frontend-demo') }}" class="nav-link {{ request()->routeIs('frontend-demo') ? 'is-active' : '' }}" @if (request()->routeIs('frontend-demo')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>API Demo</a>
                         </div>
 
                         <div class="ml-auto relative">
@@ -51,8 +52,8 @@
                         </div>
 
                         @else
-                        <a href="{{ route('login') }}" class="nav-link {{ request()->routeIs('login') ? 'is-active' : '' }}" @if (request()->routeIs('login')) aria-current="page" @endif>Login</a>
-                        <a href="{{ route('register') }}" class="nav-link {{ request()->routeIs('register') ? 'is-active' : '' }}" @if (request()->routeIs('register')) aria-current="page" @endif>Register</a>
+                        <a href="{{ route('login') }}" class="nav-link {{ request()->routeIs('login') ? 'is-active' : '' }}" @if (request()->routeIs('login')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>Login</a>
+                        <a href="{{ route('register') }}" class="nav-link {{ request()->routeIs('register') ? 'is-active' : '' }}" @if (request()->routeIs('register')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>Register</a>
                         @endauth
                     </div>
                 </div>

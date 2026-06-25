@@ -14,7 +14,7 @@
         </div>
 
         @if (session('status'))
-        <div class="status-message status-message--success mb-6" role="status">
+        <div class="status-message status-message--success mb-6" role="status" style="background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; border-radius: 0.75rem; padding: 1rem 1.1rem; font-weight: 600; text-align: left;">
             {{ session('status') }}
         </div>
         @endif
