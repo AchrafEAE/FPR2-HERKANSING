@@ -76,6 +76,47 @@ body {
 nav {
     background: var(--nav-bg, #ffffff);
 }
+.nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    color: #4b5563;
+    font-weight: 600;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: #111827;
+}
+.nav-link.is-active {
+    color: #111827;
+}
+.nav-link.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.25rem;
+    height: 0.18rem;
+    border-radius: 9999px;
+    background: var(--brand);
+}
+.nav-menu-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #374151;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+.nav-menu-link:hover,
+.nav-menu-link.is-active {
+    background: #f3f4f6;
+    color: #111827;
+}
+.nav-menu-link.is-active {
+    border-left: 0.2rem solid var(--brand);
+    padding-left: 0.8rem;
+}
 .max-w-7xl {
     max-width: 80rem;
     margin-left: auto;
@@ -351,6 +392,17 @@ textarea {
 .form-error-summary ul {
     margin: 0.5rem 0 0;
     padding-left: 1.2rem;
+}
+.status-message {
+    border-radius: 0.75rem;
+    padding: 1rem 1.1rem;
+    font-weight: 600;
+    text-align: left;
+}
+.status-message--success {
+    border: 1px solid #bbf7d0;
+    background: #f0fdf4;
+    color: #166534;
 }
 .form-grid {
     display: grid;

@@ -14,7 +14,7 @@
         </div>
 
         @if (session('status'))
-        <div class="feature-card mb-6 text-left">
+        <div class="status-message status-message--success mb-6" role="status">
             {{ session('status') }}
         </div>
         @endif

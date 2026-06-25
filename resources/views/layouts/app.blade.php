@@ -30,18 +30,18 @@
                     <div class="ml-10 flex items-center space-x-4 w-full">
                         @auth
                         <div class="flex items-center space-x-4">
-                            <a href="{{ route('dashboard') }}" class="text-gray-600 hover:text-gray-900">Dashboard</a>
-                            <a href="{{ route('posts.index') }}" class="text-gray-600 hover:text-gray-900">Posts</a>
-                            <a href="{{ route('profiles.index') }}" class="text-gray-600 hover:text-gray-900">Profielen</a>
-                            <a href="{{ route('frontend-demo') }}" class="text-gray-600 hover:text-gray-900">API Demo</a>
+                            <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'is-active' : '' }}" @if (request()->routeIs('dashboard')) aria-current="page" @endif>Dashboard</a>
+                            <a href="{{ route('posts.index') }}" class="nav-link {{ request()->routeIs('posts.*') ? 'is-active' : '' }}" @if (request()->routeIs('posts.*')) aria-current="page" @endif>Posts</a>
+                            <a href="{{ route('profiles.index') }}" class="nav-link {{ request()->routeIs('profiles.*') ? 'is-active' : '' }}" @if (request()->routeIs('profiles.*')) aria-current="page" @endif>Profielen</a>
+                            <a href="{{ route('frontend-demo') }}" class="nav-link {{ request()->routeIs('frontend-demo') ? 'is-active' : '' }}" @if (request()->routeIs('frontend-demo')) aria-current="page" @endif>API Demo</a>
                         </div>
 
                         <div class="ml-auto relative">
                             <details class="relative">
                                 <summary class="cursor-pointer text-gray-700 list-none">{{ auth()->user()->email }} ▼</summary>
                                 <div class="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50 py-2">
-                                    <a href="{{ route('bio.public', auth()->user()) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ auth()->user()->email }}</a>
-                                    <a href="{{ route('bio.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bio</a>
+                                    <a href="{{ route('bio.public', auth()->user()) }}" class="nav-menu-link {{ request()->routeIs('bio.public') ? 'is-active' : '' }}" @if (request()->routeIs('bio.public')) aria-current="page" @endif>{{ auth()->user()->email }}</a>
+                                    <a href="{{ route('bio.edit') }}" class="nav-menu-link {{ request()->routeIs('bio.*') && ! request()->routeIs('bio.public') ? 'is-active' : '' }}" @if (request()->routeIs('bio.*') && ! request()->routeIs('bio.public')) aria-current="page" @endif>Bio</a>
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
                                         <button type="submit" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</button>
@@ -51,8 +51,8 @@
                         </div>
 
                         @else
-                        <a href="{{ route('login') }}" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Login</a>
-                        <a href="{{ route('register') }}" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Register</a>
+                        <a href="{{ route('login') }}" class="nav-link {{ request()->routeIs('login') ? 'is-active' : '' }}" @if (request()->routeIs('login')) aria-current="page" @endif>Login</a>
+                        <a href="{{ route('register') }}" class="nav-link {{ request()->routeIs('register') ? 'is-active' : '' }}" @if (request()->routeIs('register')) aria-current="page" @endif>Register</a>
                         @endauth
                     </div>
                 </div>
