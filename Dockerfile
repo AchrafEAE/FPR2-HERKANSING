@@ -58,3 +58,7 @@ RUN mkdir -p /var/www/html/storage/logs /var/www/html/storage/framework/cache /v
     && chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
+# Configure Apache to listen on $PORT dynamically and start in the foreground
+CMD ["sh", "-c", "sed -i 's/Listen 80/Listen '${PORT:-8080}'/g' /etc/apache2/ports.conf && sed -i 's/VirtualHost \\*:80/VirtualHost \\*:'${PORT:-8080}'/g' /etc/apache2/sites-available/*.conf && apache2-foreground"]
+
+
