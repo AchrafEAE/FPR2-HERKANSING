@@ -640,6 +640,65 @@ textarea {
     flex: 0 0 auto;
 }
 
+.error-page {
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+}
+
+.error-card {
+    width: 100%;
+    max-width: 42rem;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.12);
+}
+
+.error-card--warning {
+    border: 1px solid #fde68a;
+    border-top: 0.5rem solid #f59e0b;
+}
+
+.error-card--danger {
+    border: 1px solid #fecaca;
+    border-top: 0.5rem solid #dc2626;
+}
+
+.error-code {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.error-title {
+    margin: 0.5rem 0 0;
+    color: #0f172a;
+    font-size: 2.25rem;
+    line-height: 1.15;
+}
+
+.error-message {
+    max-width: 34rem;
+    margin: 1rem auto 0;
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.75rem;
+}
+
 @media (max-width: 768px) {
     .study-progress__header {
         flex-direction: column;
