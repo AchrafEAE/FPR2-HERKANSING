@@ -27,7 +27,7 @@
                         Portfolio
                     </a>
                 </div>
-
+                <button id="theme-toggle" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200" aria-label="Toggle dark mode">🌙</button>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4 w-full">
                         @auth
@@ -59,7 +59,7 @@
                         @endauth
                     </div>
                 </div>
-                <button id="theme-toggle" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200" aria-label="Toggle dark mode">🌙</button>
+                
             </div>
         </div>
     </nav>

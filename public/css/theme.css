@@ -10,34 +10,45 @@
   --accent: #3b82f6;
 }
 
-.dark .bg-gray-200 {
-  background-color: var(--bg) !important;
-}
-
-.dark .text-gray-800 {
-  color: var(--text) !important;
-}
-
-.dark .text-gray-700 {
-  color: var(--text) !important;
-}
-
-/* Override Tailwind utility colors when dark mode is active */
+/* General overrides when .dark is on <html> */
 html.dark body {
   background-color: var(--bg) !important;
   color: var(--text) !important;
 }
 
-.dark .bg-white {
+html.dark a {
+  color: var(--accent) !important;
+}
+
+/* Tailwind utility overrides */
+html.dark .bg-white,
+html.dark .bg-gray-100,
+html.dark .bg-gray-200,
+html.dark .bg-gray-300,
+html.dark .bg-gray-400 {
   background-color: var(--bg) !important;
 }
 
-.dark .text-gray-900 {
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700,
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
   color: var(--text) !important;
 }
 
-.dark .bg-gray-100 {
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: var(--text) !important;
+}
+
+/* Button and form element styles */
+html.dark button,
+html.dark input,
+html.dark select,
+html.dark textarea {
   background-color: var(--bg) !important;
+  color: var(--text) !important;
 }
 
 body {
