@@ -42,8 +42,8 @@ WORKDIR /var/www/html
 # Install PHP extensions for production
 RUN docker-php-ext-install pdo pdo_mysql
 
-# Enable Apache mod_rewrite for Laravel routing
-RUN a2enmod rewrite
+# Enable Apache modules for Laravel
+RUN a2enmod rewrite && a2dismod mpm_event && a2enmod mpm_prefork
 
 # Change Apache DocumentRoot to Laravel's public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
