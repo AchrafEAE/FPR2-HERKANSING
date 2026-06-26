@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string|null $linkedin_url
  * @property string|null $github_url
  * @property int|null $years_experience
+ * @property string|null $avatar_path
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \App\Models\User|null $user
  */
@@ -39,6 +40,7 @@ class Bio extends Model
         'linkedin_url',
         'github_url',
         'years_experience',
+        'avatar_path',
     ];
 
     /**

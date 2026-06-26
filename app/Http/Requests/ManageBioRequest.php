@@ -25,6 +25,7 @@ class ManageBioRequest extends FormRequest
             'linkedin_url' => ['nullable', 'url', 'max:255'],
             'github_url' => ['nullable', 'url', 'max:255'],
             'years_experience' => ['nullable', 'integer', 'min:0', 'max:60'],
+            'avatar' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
         ];
     }
 }

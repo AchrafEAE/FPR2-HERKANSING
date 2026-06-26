@@ -91,6 +91,7 @@
     </footer>
 
     <script src="{{ asset('js/theme-toggle.js') }}?v={{ filemtime(public_path('js/theme-toggle.js')) }}"></script>
+    @stack('scripts')
 </body>
 
 </html>

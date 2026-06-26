@@ -19,7 +19,7 @@
         </div>
         @endif
 
-        <form method="POST" action="{{ route('bio.update') }}" class="feature-card text-left">
+        <form method="POST" action="{{ route('bio.update') }}" enctype="multipart/form-data" class="feature-card text-left">
             @csrf
             @method('PUT')
 
@@ -33,6 +33,28 @@
                 </ul>
             </div>
             @endif
+
+            {{-- Avatar upload --}}
+            <div class="form-field mb-6">
+                <label for="avatar" class="form-label">Avatar <p class="form-help form-tip" tabindex="0">
+                        <span class="form-tip-trigger" aria-hidden="true">i</span>
+                        <span class="form-tip-text">Upload een profielfoto (jpg, png of webp, max 2 MB).</span>
+                    </p></label>
+                <div class="flex items-center gap-4 flex-wrap">
+                    <div id="avatar-preview-wrapper" style="width:80px;height:80px;border-radius:50%;overflow:hidden;background:#e5e7eb;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        @if ($bio->avatar_path)
+                            <img id="avatar-preview" src="{{ asset('storage/' . $bio->avatar_path) }}" alt="Avatar" style="width:100%;height:100%;object-fit:cover;">
+                        @else
+                            <img id="avatar-preview" src="" alt="Avatar" style="width:100%;height:100%;object-fit:cover;display:none;">
+                            <span id="avatar-placeholder" style="color:#9ca3af;font-size:2rem;">👤</span>
+                        @endif
+                    </div>
+                    <div>
+                        <input id="avatar" name="avatar" type="file" accept="image/jpeg,image/png,image/webp" class="form-input @error('avatar') is-invalid @enderror" onchange="previewAvatar(this)">
+                        @error('avatar')<p class="form-error">{{ $message }}</p>@enderror
+                    </div>
+                </div>
+            </div>
 
             <div class="form-grid form-grid--two">
                 <div class="form-field">
@@ -124,3 +146,21 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    function previewAvatar(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = document.getElementById('avatar-preview');
+                const placeholder = document.getElementById('avatar-placeholder');
+                img.src = e.target.result;
+                img.style.display = '';
+                if (placeholder) placeholder.style.display = 'none';
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+@endpush

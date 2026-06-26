@@ -20,6 +20,11 @@
             @if ($bio)
                 <div class="feature-card">
                     <div class="prose">
+                        @if ($bio->avatar_path)
+                            <div style="margin-bottom:1rem;display:flex;align-items:center;gap:1rem;">
+                                <img src="{{ asset('storage/' . $bio->avatar_path) }}" alt="Avatar van {{ $user->name ?? $user->email }}" style="width:80px;height:80px;border-radius:50%;object-fit:cover;">
+                            </div>
+                        @endif
                         <p class="lead">{{ $bio->summary }}</p>
                     </div>
 

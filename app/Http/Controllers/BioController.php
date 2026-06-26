@@ -10,6 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Storage;
 
 class BioController extends Controller
 {
@@ -80,10 +81,23 @@ class BioController extends Controller
         /** @var \App\Models\User $user */
         $user = $request->user();
 
-        Bio::query()->updateOrCreate(
+        $validated = $request->validated();
+        unset($validated['avatar']);
+
+        $bio = Bio::query()->updateOrCreate(
             ['user_id' => $user->id],
-            array_merge($request->validated(), ['user_id' => $user->id])
+            array_merge($validated, ['user_id' => $user->id])
         );
+
+        if ($request->hasFile('avatar')) {
+            // Delete old avatar if it exists
+            if ($bio->avatar_path && Storage::disk('public')->exists($bio->avatar_path)) {
+                Storage::disk('public')->delete($bio->avatar_path);
+            }
+
+            $path = $request->file('avatar')->store('avatars', 'public');
+            $bio->update(['avatar_path' => $path]);
+        }
 
         return redirect()->route('bio.edit')->with('status', 'Bio succesvol opgeslagen.');
     }
