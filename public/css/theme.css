@@ -10,6 +10,36 @@
   --accent: #3b82f6;
 }
 
+.dark .bg-gray-200 {
+  background-color: var(--bg) !important;
+}
+
+.dark .text-gray-800 {
+  color: var(--text) !important;
+}
+
+.dark .text-gray-700 {
+  color: var(--text) !important;
+}
+
+/* Override Tailwind utility colors when dark mode is active */
+html.dark body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.dark .bg-white {
+  background-color: var(--bg) !important;
+}
+
+.dark .text-gray-900 {
+  color: var(--text) !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: var(--bg) !important;
+}
+
 body {
   background-color: var(--bg);
   color: var(--text);

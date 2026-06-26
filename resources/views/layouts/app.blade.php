@@ -14,10 +14,11 @@
     {{-- Load Vite compiled assets in production/dev with HMR --}}
     @if (app()->environment('production') || file_exists(public_path('hot')))
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/theme.css') }}?v={{ filemtime(public_path('css/theme.css')) }}">
     @endif
 </head>
 
-<body class="bg-gray-100">
+<body>
     <nav class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
