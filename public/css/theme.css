@@ -1,0 +1,22 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --accent: #2563eb;
+}
+
+.dark {
+  --bg: #111827;
+  --text: #f9fafb;
+  --accent: #3b82f6;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--accent);
+  transition: color 0.3s;
+}
