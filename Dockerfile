@@ -35,47 +35,26 @@ RUN composer install --no-dev --no-interaction --no-progress --optimize-autoload
 RUN npm install && npm run build
 
 # Production stage
-FROM php:8.2-fpm
+FROM php:8.2-apache
 
-WORKDIR /app
-
-# Install runtime dependencies
-RUN apt-get update && apt-get install -y \
-    nginx \
-    curl \
-    gettext-base \
-    libpq5 \
-    && rm -rf /var/lib/apt/lists/*
+WORKDIR /var/www/html
 
 # Install PHP extensions for production
 RUN docker-php-ext-install pdo pdo_mysql
 
-# Copy PHP-FPM config
-COPY docker/php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
-COPY docker/php.ini /usr/local/etc/php/conf.d/app.ini
+# Enable Apache mod_rewrite for Laravel routing
+RUN a2enmod rewrite
 
-# Copy Nginx config
-# Copy Nginx config template
-COPY docker/nginx.conf /etc/nginx/sites-available/default.template
+# Change Apache DocumentRoot to Laravel's public directory
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
 # Copy built app from builder
-COPY --from=builder /build /app
-
-# Copy compiled Vite assets into production image
-COPY --from=builder /build/public/build /app/public/build
+COPY --from=builder /build /var/www/html
 
 # Create necessary directories with permissions
-RUN mkdir -p /app/storage/logs /app/storage/framework/cache /app/storage/framework/views \
-    && chown -R www-data:www-data /app \
-    && chmod -R 775 /app/storage /app/bootstrap/cache \
-    && chmod -R 755 /app/public/build
+RUN mkdir -p /var/www/html/storage/logs /var/www/html/storage/framework/cache /var/www/html/storage/framework/views \
+    && chown -R www-data:www-data /var/www/html \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD sh -c 'curl -f http://localhost:${PORT:-8080}/api/v1/portfolio || exit 1'
-
-# Expose port
-EXPOSE 8080
-
-# Start services
-CMD ["sh", "-c", "export PORT=${PORT:-8080}; envsubst '$PORT' < /etc/nginx/sites-available/default.template > /etc/nginx/sites-available/default && php-fpm -D && nginx -g 'daemon off;'"]
