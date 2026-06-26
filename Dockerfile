@@ -65,10 +65,13 @@ COPY --from=builder /build /app
 COPY --from=builder /build/public/build /app/public/build
 
 # Create necessary directories with permissions
-RUN mkdir -p /app/storage/logs /app/storage/framework/cache /app/storage/framework/views \
+RUN mkdir -p /app/storage/logs /app/storage/framework/cache /app/storage/framework/views /app/storage/app/public/avatars \
     && chown -R www-data:www-data /app \
     && chmod -R 775 /app/storage /app/bootstrap/cache \
     && chmod -R 755 /app/public/build
+
+# Create storage symlink so uploaded files are publicly accessible
+RUN ln -sf /app/storage/app/public /app/public/storage
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
