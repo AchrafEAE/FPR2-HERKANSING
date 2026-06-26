@@ -9,12 +9,12 @@
 
     {{-- Always load fallback CSS as safety net --}}
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ filemtime(public_path('css/styles.css')) }}">
-    <link rel="stylesheet" href="{{ asset('css/theme.css') }}?v={{ filemtime(public_path('css/theme.css')) }}">
+    
 
     {{-- Load Vite compiled assets in production/dev with HMR --}}
     @if (app()->environment('production') || file_exists(public_path('hot')))
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link rel="stylesheet" href="{{ asset('css/theme.css') }}?v={{ filemtime(public_path('css/theme.css')) }}">
+
     @endif
 </head>
 
@@ -27,7 +27,7 @@
                         Portfolio
                     </a>
                 </div>
-                <button id="theme-toggle" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200" aria-label="Toggle dark mode">🌙</button>
+
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4 w-full">
                         @auth
@@ -63,7 +63,7 @@
             </div>
         </div>
     </nav>
-    <script src="{{ asset('js/theme-toggle.js') }}"></script>
+
 
     <main>
         @yield('content')
