@@ -1,16 +1,51 @@
+/* ============================================================
+   Dark Mode Theme
+   Uses CSS custom properties + html.dark overrides.
+   Loaded AFTER styles.css so selectors win by source order.
+   ============================================================ */
+
+/* --- Custom Properties ------------------------------------ */
 :root {
-  --bg: #ffffff;
-  --text: #1f2937;
-  --accent: #2563eb;
+  --bg:          #ffffff;
+  --bg-surface:  #f9fafb;
+  --bg-muted:    #f3f4f6;
+  --text:        #1f2937;
+  --text-muted:  #6b7280;
+  --text-subtle:  #64748b;
+  --accent:      #2563eb;
+  --accent-hover:#1e40af;
+  --border:      #e5e7eb;
+  --border-muted:#dbe3ef;
+  --shadow:      rgba(0, 0, 0, 0.06);
 }
 
-.dark {
-  --bg: #111827;
-  --text: #f9fafb;
-  --accent: #3b82f6;
+html.dark {
+  --bg:          #0f172a;
+  --bg-surface:  #1e293b;
+  --bg-muted:    #334155;
+  --text:        #f1f5f9;
+  --text-muted:  #94a3b8;
+  --text-subtle:  #94a3b8;
+  --accent:      #60a5fa;
+  --accent-hover:#93c5fd;
+  --border:      #334155;
+  --border-muted:#475569;
+  --shadow:      rgba(0, 0, 0, 0.3);
 }
 
-/* General overrides when .dark is on <html> */
+/* --- Base transitions for smooth switching ---------------- */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+/* --- General overrides when .dark is on <html> ------------ */
 html.dark body {
   background-color: var(--bg) !important;
   color: var(--text) !important;
@@ -20,44 +55,314 @@ html.dark a {
   color: var(--accent) !important;
 }
 
-/* Tailwind utility overrides */
+/* --- Tailwind utility overrides --------------------------- */
 html.dark .bg-white,
-html.dark .bg-gray-100,
+html.dark .bg-gray-50,
+html.dark .bg-gray-100 {
+  background-color: var(--bg) !important;
+}
+
 html.dark .bg-gray-200,
 html.dark .bg-gray-300,
 html.dark .bg-gray-400 {
-  background-color: var(--bg) !important;
+  background-color: var(--bg-muted) !important;
 }
 
 html.dark .text-gray-900,
-html.dark .text-gray-800,
+html.dark .text-gray-800 {
+  color: var(--text) !important;
+}
+
 html.dark .text-gray-700,
 html.dark .text-gray-600,
 html.dark .text-gray-500 {
-  color: var(--text) !important;
+  color: var(--text-muted) !important;
 }
 
+html.dark .border,
 html.dark .border-gray-200,
 html.dark .border-gray-300 {
-  border-color: var(--text) !important;
+  border-color: var(--border) !important;
 }
 
-/* Button and form element styles */
-html.dark button,
-html.dark input,
-html.dark select,
-html.dark textarea {
-  background-color: var(--bg) !important;
+html.dark .border-t {
+  border-top-color: var(--border) !important;
+}
+
+html.dark .shadow-lg {
+  box-shadow: 0 10px 15px var(--shadow) !important;
+}
+
+html.dark .shadow-sm {
+  box-shadow: 0 1px 2px var(--shadow) !important;
+}
+
+/* --- Navigation ------------------------------------------- */
+html.dark nav {
+  background-color: var(--bg-surface) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+html.dark .nav-link {
+  color: var(--text-muted) !important;
+}
+
+html.dark .nav-link:hover,
+html.dark .nav-link.is-active {
   color: var(--text) !important;
 }
 
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
+html.dark .nav-menu-link {
+  color: var(--text-muted) !important;
 }
 
-a {
-  color: var(--accent);
-  transition: color 0.3s;
+html.dark .nav-menu-link:hover,
+html.dark .nav-menu-link.is-active {
+  background: var(--bg-muted) !important;
+  color: var(--text) !important;
+}
+
+/* Dropdown menu */
+html.dark details > div,
+html.dark .absolute.bg-white {
+  background-color: var(--bg-surface) !important;
+  border-color: var(--border) !important;
+}
+
+html.dark summary {
+  color: var(--text-muted) !important;
+}
+
+/* --- Footer ----------------------------------------------- */
+html.dark footer {
+  background-color: var(--bg-surface) !important;
+  border-top-color: var(--border) !important;
+}
+
+/* --- Hero section ----------------------------------------- */
+html.dark .hero {
+  background: linear-gradient(
+    135deg,
+    rgba(96, 165, 250, 0.08),
+    rgba(129, 140, 248, 0.06)
+  ) !important;
+}
+
+html.dark .hero-title {
+  color: var(--text) !important;
+}
+
+html.dark .hero-sub {
+  color: var(--text-muted) !important;
+}
+
+/* --- Buttons ---------------------------------------------- */
+html.dark .btn-outline {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html.dark .btn-outline:hover {
+  background-color: var(--bg-muted) !important;
+}
+
+/* --- Cards & forms ---------------------------------------- */
+html.dark .form-card {
+  background: var(--bg-surface) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+html.dark .feature-card {
+  background: var(--bg-surface) !important;
+  border-color: var(--border) !important;
+}
+
+html.dark .feature-card h3 {
+  color: var(--text) !important;
+}
+
+html.dark .feature-card p {
+  color: var(--text-muted) !important;
+}
+
+html.dark .form-label {
+  color: var(--text-muted) !important;
+}
+
+html.dark .form-help {
+  color: var(--text-subtle) !important;
+}
+
+html.dark .form-input,
+html.dark .form-select,
+html.dark .form-textarea {
+  background: var(--bg-muted) !important;
+  border-color: var(--border-muted) !important;
+  color: var(--text) !important;
+}
+
+html.dark .form-input:focus,
+html.dark .form-select:focus,
+html.dark .form-textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15) !important;
+}
+
+html.dark input[type="email"],
+html.dark input[type="password"],
+html.dark input[type="text"],
+html.dark textarea {
+  background: var(--bg-muted) !important;
+  border-color: var(--border-muted) !important;
+  color: var(--text) !important;
+}
+
+html.dark button,
+html.dark select {
+  background-color: var(--bg-muted) !important;
+  color: var(--text) !important;
+}
+
+/* Keep primary buttons styled */
+html.dark .btn-primary {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+html.dark .btn-primary:hover {
+  background: var(--accent-hover) !important;
+}
+
+/* --- Form errors & status --------------------------------- */
+html.dark .form-error-summary {
+  background: rgba(220, 38, 38, 0.1) !important;
+  border-color: #7f1d1d !important;
+  color: #fca5a5 !important;
+}
+
+html.dark .status-message--success {
+  background: rgba(22, 163, 74, 0.1) !important;
+  border-color: #14532d !important;
+  color: #86efac !important;
+}
+
+/* --- Study progress table --------------------------------- */
+html.dark .study-progress__title {
+  color: var(--text) !important;
+}
+
+html.dark .study-progress__description {
+  color: var(--text-subtle) !important;
+}
+
+html.dark .schema {
+  background: var(--bg-surface) !important;
+}
+
+html.dark .schema th {
+  background: var(--bg-muted) !important;
+  color: var(--text) !important;
+}
+
+html.dark .schema td {
+  border-color: var(--border-muted) !important;
+}
+
+html.dark .schema th {
+  border-color: var(--border-muted) !important;
+}
+
+html.dark .schema tr.completed {
+  background: rgba(22, 163, 74, 0.1) !important;
+}
+
+html.dark .schema tr.bezig {
+  background: rgba(234, 179, 8, 0.1) !important;
+}
+
+html.dark .schema tr.gefaald {
+  background: rgba(220, 38, 38, 0.1) !important;
+}
+
+html.dark .schema input[type="text"] {
+  background: var(--bg-muted) !important;
+  border-color: var(--border-muted) !important;
+  color: var(--text) !important;
+}
+
+html.dark .progress-bar-container {
+  background: var(--bg-muted) !important;
+}
+
+html.dark .progress-text {
+  color: var(--text-muted) !important;
+}
+
+html.dark .color-container ul {
+  color: var(--text-muted) !important;
+}
+
+html.dark .color-box {
+  border-color: rgba(241, 245, 249, 0.15) !important;
+}
+
+/* --- Error pages ------------------------------------------ */
+html.dark .error-card {
+  background: var(--bg-surface) !important;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .error-code {
+  color: var(--text-subtle) !important;
+}
+
+html.dark .error-title {
+  color: var(--text) !important;
+}
+
+html.dark .error-message {
+  color: var(--text-muted) !important;
+}
+
+/* --- Tooltip / form-tip ----------------------------------- */
+html.dark .form-tip-trigger {
+  background: rgba(96, 165, 250, 0.15) !important;
+  color: var(--accent) !important;
+}
+
+/* --- Theme toggle button ---------------------------------- */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg-surface);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--bg-muted);
+  transform: scale(1.08);
+}
+
+/* Show moon icon in light mode, sun icon in dark mode */
+.theme-icon--dark {
+  display: none;
+}
+
+html.dark .theme-icon--light {
+  display: none;
+}
+
+html.dark .theme-icon--dark {
+  display: inline;
 }

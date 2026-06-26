@@ -1,5 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="">
+<script>
+  // Apply saved theme immediately to prevent flash of light mode
+  (function() {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +18,7 @@
 
     {{-- Always load fallback CSS as safety net --}}
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ filemtime(public_path('css/styles.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/theme.css') }}?v={{ filemtime(public_path('css/theme.css')) }}">
     
 
     {{-- Load Vite compiled assets in production/dev with HMR --}}
@@ -58,8 +68,13 @@
                         <a href="{{ route('register') }}" class="nav-link {{ request()->routeIs('register') ? 'is-active' : '' }}" @if (request()->routeIs('register')) aria-current="page" style="border-bottom: 3px solid #2563eb; color: #111827;" @endif>Register</a>
                         @endauth
                     </div>
-                </div>
-                
+            </div>
+
+                {{-- Dark mode toggle --}}
+                <button id="theme-toggle" type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <span class="theme-icon theme-icon--light">🌙</span>
+                    <span class="theme-icon theme-icon--dark">☀️</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -75,6 +90,7 @@
         </div>
     </footer>
 
+    <script src="{{ asset('js/theme-toggle.js') }}?v={{ filemtime(public_path('js/theme-toggle.js')) }}"></script>
 </body>
 
 </html>
