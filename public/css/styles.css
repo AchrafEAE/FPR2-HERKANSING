@@ -91,16 +91,6 @@ nav {
 .nav-link.is-active {
     color: #111827;
 }
-.nav-link.is-active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0.25rem;
-    height: 0.18rem;
-    border-radius: 9999px;
-    background: var(--brand);
-}
 .nav-menu-link {
     display: block;
     padding: 0.5rem 1rem;
